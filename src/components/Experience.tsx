@@ -3,6 +3,7 @@ import { Calendar, MapPin, Building, Code2 } from 'lucide-react';
 
 interface ExperienceItem {
   company: string;
+  companyUrl?: string;
   companyDetails?: string;
   position: string;
   duration: string;
@@ -14,6 +15,7 @@ interface ExperienceItem {
 const experienceData: ExperienceItem[] = [
   {
     company: "deeptune.ai",
+    companyUrl: "https://deeptune.ai",
     position: "Software Engineer",
     duration: "Jun '25 - Present",
     location: "Remote",
@@ -24,6 +26,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     company: "multithread.ai",
+    companyUrl: "https://multithread.ai",
     position: "Senior Software Engineer",
     duration: "May '24 - Present",
     location: "Remote",
@@ -43,7 +46,30 @@ const experienceData: ExperienceItem[] = [
     ]
   },
   {
+    company: "scalexp.com",
+    companyUrl: "https://scalexp.com",
+    position: "Senior Software Engineer", 
+    duration: "May '24 - Present",
+    location: "Remote",
+    techStack: ["Typescript", "Javascript", "AWS", "Node.js"],
+    responsibilities: [
+      "Backend and devops engineer for an early-stage US-based startup in the music-tech industry."
+    ]
+  },
+  {
+    company: "tradingtechsolutions.com",
+    companyUrl: "https://tradingtechsolutions.com",
+    position: "Senior Software Engineer",
+    duration: "May '24 - Present", 
+    location: "Remote",
+    techStack: ["Typescript", "Javascript", "Node.js", "PostgreSQL"],
+    responsibilities: [
+      "Backend engineer for a series F US-based startup in the food-tech industry."
+    ]
+  },
+  {
     company: "nsave",
+    companyUrl: "https://nsave.com",
     companyDetails: "YC 2022 | Sequoia Capital | FinTech | London",
     position: "Founding Software Engineer",
     duration: "Mar '23 - Mar '24 (1 yr)",
@@ -66,6 +92,7 @@ const experienceData: ExperienceItem[] = [
   },
   {
     company: "MathWorks",
+    companyUrl: "https://mathworks.com",
     position: "Software Engineer",
     duration: "Jul '21 - Mar '23 (1 yr 8 mos)",
     location: "Remote",
@@ -142,7 +169,18 @@ const Experience: React.FC = () => {
                       <h3 className="text-2xl font-bold text-slate-900 mb-2">{job.position}</h3>
                       <div className="flex items-center gap-2 mb-2">
                         <Building className="text-teal-600" size={18} />
-                        <span className="text-lg font-semibold text-slate-800">{job.company}</span>
+                        {job.companyUrl ? (
+                          <a 
+                            href={job.companyUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-lg font-semibold text-teal-600 hover:text-teal-700 hover:underline transition-colors duration-200 cursor-pointer"
+                          >
+                            {job.company}
+                          </a>
+                        ) : (
+                          <span className="text-lg font-semibold text-slate-800">{job.company}</span>
+                        )}
                       </div>
                       {job.companyDetails && (
                         <p className="text-sm text-teal-600 font-medium mb-2">{job.companyDetails}</p>

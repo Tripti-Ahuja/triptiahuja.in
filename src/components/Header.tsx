@@ -4,15 +4,21 @@ import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award
 const Header: React.FC = () => {
   const experiences = [
     {
-      company: "deeptune.ai",
+      company: "Deeptune",
+      companyUrl: "https://deeptune.ai",
+      companyLogo: "/logos/deeptune.jpg",
+      logoColor: "bg-white",
       position: "Senior Software Engineer",
       duration: "Jun '25 - Present",
       description: "AI-driven solutions and machine learning applications development",
       tech: ["AI/ML", "Python", "LLMs"],
-      tags: ["AI", "$1M+ ARR", "Contract"]
+      tags: ["AI", "Contract"]
     },
     {
       company: "ScaleXP",
+      companyUrl: "https://scalexp.com",
+      companyLogo: "/logos/scalexp.jpg",
+      logoColor: "bg-white",
       position: "Senior Software Engineer",
       duration: "Jan '25 - May '25",
       description: "Backend development and system architecture for scaling enterprise solutions",
@@ -20,7 +26,10 @@ const Header: React.FC = () => {
       tags: ["Contract"]
     },
     {
-      company: "multithread.ai",
+      company: "Multithread",
+      companyUrl: "https://multithread.ai",
+      companyLogo: "/logos/multithread.jpg",
+      logoColor: "bg-white",
       position: "Senior Software Engineer", 
       duration: "May '24 - Dec '24",
       description: "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
@@ -28,16 +37,22 @@ const Header: React.FC = () => {
       tags: ["Founding", "Tech Lead", "Contract"]
     },
     {
-      company: "tradingtechsolutions",
+      company: "TradingTechSolutions",
+      companyUrl: "https://tradetechsolutions.io",
+      companyLogo: "/logos/tradetechsolutions.jpg",
+      logoColor: "bg-white",
       position: "Senior Software Engineer",
       duration: "Mar '24 - May '24",
       description: "Developed trading application achieving $1M+ ARR",
       highlight: "$1M+ ARR",
       tech: ["Python", "Trading APIs", "Real-time Systems"],
-      tags: ["Founding", "$1M+ ARR", "Contract"]
+      tags: ["Founding", "Contract"]
     },
     {
       company: "nsave",
+      companyUrl: "https://nsave.com",
+      companyLogo: "/logos/nsave.jpg",
+      logoColor: "bg-white",
       position: "Founding Software Engineer",
       duration: "Mar '23 - Mar '24",
       highlight: "YC 2022 | Sequoia Capital",
@@ -47,6 +62,9 @@ const Header: React.FC = () => {
     },
     {
       company: "MathWorks",
+      companyUrl: "https://mathworks.com",
+      companyLogo: "/logos/mathworks.jpg",
+      logoColor: "bg-white",
       position: "Software Engineer",
       duration: "Jul '21 - Mar '23",
       description: "Infrastructure automation, cloud migration, and internal tooling development",
@@ -55,6 +73,8 @@ const Header: React.FC = () => {
     },
     {
       company: "OffTrade",
+      companyLogo: "/logos/offtrade.jpg",
+      logoColor: "bg-white",
       position: "CTO",
       duration: "Jan '20 - Jun '21",
       description: "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
@@ -181,8 +201,35 @@ const Header: React.FC = () => {
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
                         <div className="flex-1">
                           <h3 className="text-base md:text-lg font-semibold text-slate-900">{exp.position}</h3>
-                          <div className="flex items-center gap-2 mt-1 flex-wrap">
-                            <span className="text-sm md:text-base text-slate-700">{exp.company}</span>
+                          <div className="flex items-center gap-3 mt-1 flex-wrap">
+                            {/* Company Logo */}
+                            <div className={`w-8 h-8 rounded-lg ${exp.logoColor} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+                              {exp.companyLogo && (exp.companyLogo.startsWith('http') || exp.companyLogo.startsWith('/')) ? (
+                                <img 
+                                  src={exp.companyLogo} 
+                                  alt={`${exp.company} logo`}
+                                  className="w-6 h-6 object-contain"
+                                  onError={(e) => {
+                                    e.currentTarget.style.display = 'none';
+                                    e.currentTarget.parentElement!.innerHTML = `<span class="text-white font-semibold text-xs">${exp.company.charAt(0)}</span>`;
+                                  }}
+                                />
+                              ) : (
+                                <span className="text-white font-semibold text-xs">{exp.companyLogo}</span>
+                              )}
+                            </div>
+                            {exp.companyUrl ? (
+                              <a 
+                                href={exp.companyUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-sm md:text-base bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent hover:from-teal-700 hover:to-blue-700 hover:underline font-medium transition-all duration-200"
+                              >
+                                {exp.company}
+                              </a>
+                            ) : (
+                              <span className="text-sm md:text-base bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent font-medium">{exp.company}</span>
+                            )}
                             {exp.tags && exp.tags.map((tag, tagIndex) => {
                               let tagStyle = "px-2 py-1 text-xs rounded-full font-medium";
                               if (tag === "YC 2022") tagStyle += " bg-blue-100 text-blue-700";
