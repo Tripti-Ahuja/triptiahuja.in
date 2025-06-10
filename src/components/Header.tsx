@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle, FileText } from 'lucide-react';
 
 const Header: React.FC = () => {
   const experiences = [
@@ -107,35 +107,44 @@ const Header: React.FC = () => {
           </div>
 
           {/* Contact Bar */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <a href="mailto:reeshabhkumarranjan@gmail.com" 
-               className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-              <Mail size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">Email</span>
-            </a>
-            <a href="https://t.me/whadupdog" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-              <MessageCircle size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">Telegram</span>
-            </a>
-            <a href="https://discord.com/users/mrobjectoriented" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-              <MessageCircle size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">Discord</span>
-            </a>
-            <a href="https://github.com/reeshabhranjan" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-              <Github size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">GitHub</span>
-            </a>
-            <a href="https://linkedin.com/in/reeshabh" target="_blank" rel="noopener noreferrer"
-               className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-              <Linkedin size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">LinkedIn</span>
-            </a>
-            <div className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
-              <MapPin size={16} className="text-slate-600" />
-              <span className="text-sm text-slate-700">Remote</span>
+          <div className="flex flex-col items-center gap-4 mb-10">
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="mailto:reeshabhkumarranjan@gmail.com" 
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <Mail size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">Email</span>
+              </a>
+              <a href="https://t.me/whadupdog" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <MessageCircle size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">Telegram</span>
+              </a>
+              <a href="https://discord.com/users/mrobjectoriented" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <MessageCircle size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">Discord</span>
+              </a>
+              <a href="https://github.com/reeshabhranjan" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <Github size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/reeshabh" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <Linkedin size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">LinkedIn</span>
+              </a>
+              <div className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
+                <MapPin size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">Remote</span>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-32 px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <FileText size={16} className="text-slate-600" />
+                <span className="text-sm text-slate-700">Resume</span>
+              </a>
             </div>
           </div>
 
