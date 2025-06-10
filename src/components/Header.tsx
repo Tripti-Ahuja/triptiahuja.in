@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       duration: "Jun '25 - Present",
       description: "AI-driven solutions and machine learning applications development",
       tech: ["AI/ML", "Python", "LLMs"],
-      tags: ["AI", "Contract"]
+      tags: ["AI", "Contract", "New York", "Remote"]
     },
     {
       company: "ScaleXP",
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       duration: "Jan '25 - May '25",
       description: "Backend development and system architecture for scaling enterprise solutions",
       tech: ["Python", "Node.js", "AWS", "PostgreSQL"],
-      tags: ["Contract"]
+      tags: ["Contract", "London", "FinTech", "Remote"]
     },
     {
       company: "Multithread",
@@ -34,10 +34,10 @@ const Header: React.FC = () => {
       duration: "May '24 - Dec '24",
       description: "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
       tech: ["TypeScript", "AWS ECS", "GCP", "Node.js", "PostgreSQL"],
-      tags: ["Founding", "Tech Lead", "Contract"]
+      tags: ["Founding", "Tech Lead", "Contract", "San Francisco", "MusicTech", "Remote"]
     },
     {
-      company: "TradingTechSolutions",
+      company: "TradeTechSolutions",
       companyUrl: "https://tradetechsolutions.io",
       companyLogo: "/logos/tradetechsolutions.jpg",
       logoColor: "bg-white",
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
       description: "Developed trading application achieving $1M+ ARR",
       highlight: "$1M+ ARR",
       tech: ["Python", "Trading APIs", "Real-time Systems"],
-      tags: ["Founding", "Contract"]
+      tags: ["Founding", "Contract", "UAE", "FinTech", "Remote"]
     },
     {
       company: "nsave",
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
       highlight: "YC 2022 | Sequoia Capital",
       description: "First engineer, 0->1 product development. Built core FinTech infrastructure from ground up",
       tech: ["NestJS", "Apache Kafka", "PostgreSQL", "Microservices"],
-      tags: ["YC 2022", "Sequoia", "Founding", "Contract"]
+      tags: ["YC 2022", "Sequoia", "Founding", "Contract", "London", "FinTech", "Remote"]
     },
     {
       company: "MathWorks",
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
       duration: "Jul '21 - Mar '23",
       description: "Infrastructure automation, cloud migration, and internal tooling development",
       tech: ["Python", "Docker", "Ansible", "Hashicorp Vault", "AWS"],
-      tags: ["BigTech", "Full-time"]
+      tags: ["BigTech", "Full-time", "Bangalore", "Scientific", "Remote"]
     },
     {
       company: "OffTrade",
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
       duration: "Jan '20 - Jun '21",
       description: "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
       tech: ["Django", "FastAPI", "AWS", "Redis"],
-      tags: ["Founder", "Full-time"]
+      tags: ["Founder", "Full-time", "Bangalore", "FinTech", "Remote"]
     }
   ];
 
@@ -242,6 +242,9 @@ const Header: React.FC = () => {
                               else if (tag === "BigTech") tagStyle += " bg-teal-100 text-teal-700";
                               else if (tag === "Contract") tagStyle += " bg-blue-100 text-blue-700";
                               else if (tag === "Full-time") tagStyle += " bg-blue-100 text-blue-700";
+                              else if (tag === "Remote") tagStyle += " bg-gray-100 text-gray-700";
+                              else if (["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"].includes(tag)) tagStyle += " bg-yellow-100 text-yellow-700";
+                              else if (["FinTech", "MusicTech", "Scientific"].includes(tag)) tagStyle += " bg-green-100 text-green-700";
                               else tagStyle += " bg-slate-100 text-slate-700";
                               
                               return (
