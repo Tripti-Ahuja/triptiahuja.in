@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle, FileText } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle } from 'lucide-react';
 
 const Header: React.FC = () => {
   const experiences = [
@@ -159,13 +159,6 @@ const Header: React.FC = () => {
                 <span className="text-xs md:text-sm text-slate-700">Remote</span>
               </div>
             </div>
-            <div className="flex justify-center">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
-                 className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-                <FileText size={14} className="text-slate-600 md:w-4 md:h-4" />
-                <span className="text-xs md:text-sm text-slate-700">Resume</span>
-              </a>
-            </div>
           </div>
 
           {/* Stats */}
@@ -255,7 +248,7 @@ const Header: React.FC = () => {
                             })}
                           </div>
                         </div>
-                        <span className="text-xs md:text-sm text-slate-500 font-medium whitespace-nowrap">{exp.duration}</span>
+                        <span className="text-xs md:text-sm text-white font-medium whitespace-nowrap">{exp.duration}</span>
                       </div>
                       <p className="text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">{exp.description}</p>
                       <div className="flex flex-wrap gap-1.5">

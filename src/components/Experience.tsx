@@ -187,7 +187,7 @@ const Experience: React.FC = () => {
                       )}
                     </div>
                     <div className="flex flex-col lg:items-end gap-2">
-                      <div className="flex items-center gap-2 text-slate-600">
+                      <div className="flex items-center gap-2 text-white">
                         <Calendar size={16} />
                         <span className="font-medium">{job.duration}</span>
                       </div>
