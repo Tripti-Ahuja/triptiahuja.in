@@ -139,11 +139,6 @@ const Header: React.FC = () => {
                 <MessageCircle size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">Telegram</span>
               </a>
-              <a href="https://discord.com/users/mrobjectoriented" target="_blank" rel="noopener noreferrer"
-                 className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
-                <MessageCircle size={14} className="text-slate-600 md:w-4 md:h-4" />
-                <span className="text-xs md:text-sm text-slate-700">Discord</span>
-              </a>
               <a href="https://github.com/reeshabhranjan" target="_blank" rel="noopener noreferrer"
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <Github size={14} className="text-slate-600 md:w-4 md:h-4" />
