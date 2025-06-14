@@ -37,7 +37,9 @@ const Education: React.FC = () => {
                     Bachelor of Computer Science Engineering
                   </h3>
                   <h4 className="text-xl font-semibold text-blue-600 mb-4">
-                    Indraprastha Institute of Information Technology Delhi
+                    <a href="https://iiitd.ac.in" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      Indraprastha Institute of Information Technology Delhi
+                    </a>
                   </h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -86,7 +88,9 @@ const Education: React.FC = () => {
                   
                   <div className="bg-gradient-to-r from-purple-50 to-purple-25 rounded-lg p-6 border border-purple-200">
                     <h4 className="text-xl font-bold text-slate-900 mb-2">
-                      VoIP Vanguard: A Practical FrontLine Defense Against VoIP Identification Attacks in Tor
+                      <a href="https://link.springer.com/chapter/10.1007/978-981-96-3531-3_16" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        VoIP Vanguard: A Practical FrontLine Defense Against VoIP Identification Attacks in Tor
+                      </a>
                     </h4>
                     <div className="flex items-center gap-2 text-purple-600">
                       <Award size={16} />

@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       duration: "Jun '25 - Present",
       description: "AI-driven solutions and machine learning applications development",
       tech: ["AI/ML", "Python", "LLMs"],
-      tags: ["AI", "Contract", "New York", "Remote"]
+      tags: ["AI", "New York", "Remote"]
     },
     {
       company: "ScaleXP",
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       duration: "Jan '25 - May '25",
       description: "Backend development and system architecture for scaling enterprise solutions",
       tech: ["Python", "Node.js", "AWS", "PostgreSQL"],
-      tags: ["Contract", "London", "FinTech", "Remote"]
+      tags: ["London", "FinTech", "Remote"]
     },
     {
       company: "Multithread",
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
       duration: "May '24 - Dec '24",
       description: "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
       tech: ["TypeScript", "AWS ECS", "GCP", "Node.js", "PostgreSQL"],
-      tags: ["Founding", "Tech Lead", "Contract", "San Francisco", "MusicTech", "Remote"]
+      tags: ["Founding", "Tech Lead", "San Francisco", "MusicTech", "Remote"]
     },
     {
       company: "TradeTechSolutions",
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
       description: "Developed trading application achieving $1M+ ARR",
       highlight: "$1M+ ARR",
       tech: ["Python", "Trading APIs", "Real-time Systems"],
-      tags: ["Founding", "Contract", "UAE", "FinTech", "Remote"]
+      tags: ["Founding", "UAE", "FinTech", "Remote"]
     },
     {
       company: "nsave",
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
       highlight: "YC 2022 | Sequoia Capital",
       description: "First engineer, 0->1 product development. Built core FinTech infrastructure from ground up",
       tech: ["NestJS", "Apache Kafka", "PostgreSQL", "Microservices"],
-      tags: ["YC 2022", "Sequoia", "Founding", "Contract", "London", "FinTech", "Remote"]
+      tags: ["YC 2022", "Sequoia", "Founding", "London", "FinTech", "Remote"]
     },
     {
       company: "MathWorks",
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
       duration: "Jul '21 - Mar '23",
       description: "Infrastructure automation, cloud migration, and internal tooling development",
       tech: ["Python", "Docker", "Ansible", "Hashicorp Vault", "AWS"],
-      tags: ["BigTech", "Full-time", "Bangalore", "Scientific", "Remote"]
+      tags: ["BigTech", "Bangalore", "Scientific", "Remote"]
     },
     {
       company: "OffTrade",
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
       duration: "Jan '20 - Jun '21",
       description: "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
       tech: ["Django", "FastAPI", "AWS", "Redis"],
-      tags: ["Founder", "Full-time", "Bangalore", "FinTech", "Remote"]
+      tags: ["Founder", "Bangalore", "FinTech", "Remote"]
     }
   ];
 
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">
               Reeshabh Kumar Ranjan
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-4">Senior Software Engineer</p>
+            <p className="text-lg sm:text-xl text-slate-600 mb-4">0→1 Engineer</p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
               Experienced in <span className="font-semibold text-slate-700">AI, AWS, Python, LLMs, and SaaS</span> development. 
               Specialized in <span className="font-semibold text-slate-700">0→1 product development</span> at 
@@ -228,8 +228,6 @@ const Header: React.FC = () => {
                               else if (tag === "Founder") tagStyle += " bg-red-100 text-red-700";
                               else if (tag === "Tech Lead") tagStyle += " bg-teal-100 text-teal-700";
                               else if (tag === "BigTech") tagStyle += " bg-teal-100 text-teal-700";
-                              else if (tag === "Contract") tagStyle += " bg-blue-100 text-blue-700";
-                              else if (tag === "Full-time") tagStyle += " bg-blue-100 text-blue-700";
                               else if (tag === "Remote") tagStyle += " bg-gray-100 text-gray-700";
                               else if (["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"].includes(tag)) tagStyle += " bg-yellow-100 text-yellow-700";
                               else if (["FinTech", "MusicTech", "Scientific"].includes(tag)) tagStyle += " bg-green-100 text-green-700";
@@ -343,6 +341,10 @@ const Header: React.FC = () => {
                     <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
                     <span className="text-slate-700 text-xs md:text-sm">AWS & Cloud Infrastructure</span>
                   </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
+                    <span className="text-slate-700 text-xs md:text-sm">... and anything else you need</span>
+                  </div>
                 </div>
               </div>
 
@@ -371,7 +373,7 @@ const Header: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">AWS & Cloud</h4>
+                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">Cloud</h4>
                     <div className="flex flex-wrap gap-1.5">
                       {["AWS", "GCP", "Docker", "Kafka", "PostgreSQL"].map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-purple-50 text-purple-700 rounded text-xs">
@@ -388,7 +390,9 @@ const Header: React.FC = () => {
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Publication</h3>
                 <div>
                   <h4 className="font-medium text-slate-900 text-xs md:text-sm leading-tight mb-1">
-                    VoIP Vanguard: Defense Against VoIP Attacks in Tor
+                    <a href="https://link.springer.com/chapter/10.1007/978-981-96-3531-3_16" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      VoIP Vanguard: Defense Against VoIP Attacks in Tor
+                    </a>
                   </h4>
                   <p className="text-slate-600 text-xs">NSS-SocialSec 2024</p>
                 </div>
@@ -399,7 +403,11 @@ const Header: React.FC = () => {
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Education</h3>
                 <div>
                   <h4 className="font-medium text-slate-900 text-xs md:text-sm">B.Tech Computer Science</h4>
-                  <p className="text-slate-600 text-xs md:text-sm">IIIT Delhi</p>
+                  <p className="text-slate-600 text-xs md:text-sm">
+                    <a href="https://iiitd.ac.in" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      IIIT Delhi
+                    </a>
+                  </p>
                   <p className="text-slate-500 text-xs">CGPA: 9.01/10 • 2017-2021</p>
                 </div>
               </div>
