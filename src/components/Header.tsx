@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const Header: React.FC = () => {
   const experiences = [
@@ -296,10 +297,10 @@ const Header: React.FC = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-2 space-y-4 md:space-y-6">
+            <div className="lg:col-span-2 space-y-4 md:space-y-6 lg:mt-12 xl:mt-14">
               
               {/* Startup Experience Highlight */}
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 md:p-5 border border-blue-200">
+              <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Startup Expertise</h3>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
@@ -411,6 +412,9 @@ const Header: React.FC = () => {
                   <p className="text-slate-500 text-xs">CGPA: 9.01/10 • 2017-2021</p>
                 </div>
               </div>
+
+              {/* Contact Form */}
+              <ContactForm />
             </div>
           </div>
         </div>
