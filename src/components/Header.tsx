@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle } from 'lucide-react';
-import ContactForm from './ContactForm';
+import CalendlyEmbed from './CalendlyEmbed';
 
 const Header: React.FC = () => {
   const experiences = [
@@ -413,8 +413,8 @@ const Header: React.FC = () => {
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <ContactForm />
+              {/* Calendly Embed */}
+              <CalendlyEmbed />
             </div>
           </div>
         </div>
