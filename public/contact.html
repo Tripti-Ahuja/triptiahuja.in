@@ -5,7 +5,7 @@
 </head>
 <body style="display: none;">
     <!-- This form is hidden and used only for Netlify form detection -->
-    <form name="contact" netlify netlify-recaptcha>
+    <form name="contact" netlify>
         <p>
             <label>Name: <input type="text" name="name" /></label>
         </p>
@@ -15,7 +15,6 @@
         <p>
             <label>Details: <textarea name="details"></textarea></label>
         </p>
-        <div data-netlify-recaptcha="true"></div>
         <p>
             <button type="submit">Send</button>
         </p>

@@ -28,15 +28,15 @@ const ContactForm: React.FC = () => {
     }
 
     try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('form-name', 'contact');
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('details', formData.details);
+
       const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          'name': formData.name,
-          'email': formData.email,
-          'details': formData.details,
-        }).toString(),
+        body: formDataToSend,
       });
 
       if (response.ok) {
@@ -80,9 +80,7 @@ const ContactForm: React.FC = () => {
       <form 
         name="contact" 
         method="POST" 
-        netlify="true"
-        netlify-recaptcha="true"
-        action="/thank-you/"
+        netlify
         onSubmit={handleSubmit} 
         className="space-y-3"
       >
@@ -135,8 +133,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
         
-        {/* reCAPTCHA will be automatically injected here by Netlify */}
-        <div data-netlify-recaptcha="true"></div>
         
         <button
           type="submit"
