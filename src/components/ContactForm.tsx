@@ -15,15 +15,27 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Check if we're in development mode
+    if (process.env.NODE_ENV === 'development') {
+      // Simulate form submission for local development
+      setTimeout(() => {
+        console.log('Dev mode - Form data:', formData);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', details: '' });
+        setIsSubmitting(false);
+      }, 1000);
+      return;
+    }
+
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'contact',
-          name: formData.name,
-          email: formData.email,
-          details: formData.details,
+          'name': formData.name,
+          'email': formData.email,
+          'details': formData.details,
         }).toString(),
       });
 
@@ -68,8 +80,9 @@ const ContactForm: React.FC = () => {
       <form 
         name="contact" 
         method="POST" 
-        data-netlify="true"
-        data-netlify-recaptcha="true"
+        netlify="true"
+        netlify-recaptcha="true"
+        action="/thank-you/"
         onSubmit={handleSubmit} 
         className="space-y-3"
       >

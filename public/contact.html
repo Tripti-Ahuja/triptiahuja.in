@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form - Hidden</title>
+</head>
+<body style="display: none;">
+    <!-- This form is hidden and used only for Netlify form detection -->
+    <form name="contact" netlify netlify-recaptcha>
+        <p>
+            <label>Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>Details: <textarea name="details"></textarea></label>
+        </p>
+        <div data-netlify-recaptcha="true"></div>
+        <p>
+            <button type="submit">Send</button>
+        </p>
+    </form>
+</body>
+</html>
