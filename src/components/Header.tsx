@@ -16,6 +16,17 @@ const Header: React.FC = () => {
       tags: ["AI", "New York", "Remote"]
     },
     {
+      company: "Hook",
+      companyUrl: "https://askhook.com",
+      companyLogo: "/logos/hook.jpg",
+      logoColor: "bg-white",
+      position: "Software Engineer",
+      duration: "Jun '25 - Present",
+      description: "AI-powered influencer technology platform",
+      tech: ["Node.js", "Replit"],
+      tags: ["AI", "London", "InfluencerTech"]
+    },
+    {
       company: "ScaleXP",
       companyUrl: "https://scalexp.com",
       companyLogo: "/logos/scalexp.jpg",
@@ -164,7 +175,7 @@ const Header: React.FC = () => {
               <div className="text-xs sm:text-sm text-slate-600">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">7</div>
+              <div className="text-xl sm:text-2xl font-bold text-slate-900">8</div>
               <div className="text-xs sm:text-sm text-slate-600">Companies</div>
             </div>
             <div className="text-center">
@@ -231,7 +242,7 @@ const Header: React.FC = () => {
                               else if (tag === "BigTech") tagStyle += " bg-teal-100 text-teal-700";
                               else if (tag === "Remote") tagStyle += " bg-gray-100 text-gray-700";
                               else if (["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"].includes(tag)) tagStyle += " bg-yellow-100 text-yellow-700";
-                              else if (["FinTech", "MusicTech", "Scientific"].includes(tag)) tagStyle += " bg-green-100 text-green-700";
+                              else if (["FinTech", "MusicTech", "Scientific", "InfluencerTech"].includes(tag)) tagStyle += " bg-green-100 text-green-700";
                               else tagStyle += " bg-slate-100 text-slate-700";
                               
                               return (

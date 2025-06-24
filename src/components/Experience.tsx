@@ -25,6 +25,18 @@ const experienceData: ExperienceItem[] = [
     ]
   },
   {
+    company: "Hook",
+    companyUrl: "https://askhook.com",
+    companyDetails: "AI | London | InfluencerTech",
+    position: "Software Engineer",
+    duration: "Jun '25 - Present",
+    location: "London",
+    techStack: ["Node.js", "Replit"],
+    responsibilities: [
+      "Currently working at Hook"
+    ]
+  },
+  {
     company: "multithread.ai",
     companyUrl: "https://multithread.ai",
     position: "Senior Software Engineer",
