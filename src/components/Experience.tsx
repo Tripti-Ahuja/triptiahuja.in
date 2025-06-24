@@ -28,7 +28,7 @@ const experienceData: ExperienceItem[] = [
     company: "Hook",
     companyUrl: "https://askhook.com",
     companyDetails: "AI | London | InfluencerTech",
-    position: "Software Engineer",
+    position: "Senior Software Engineer",
     duration: "Jun '25 - Present",
     location: "London",
     techStack: ["Node.js", "Replit"],

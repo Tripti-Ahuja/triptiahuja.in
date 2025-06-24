@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       companyUrl: "https://askhook.com",
       companyLogo: "/logos/hook.jpg",
       logoColor: "bg-white",
-      position: "Software Engineer",
+      position: "Senior Software Engineer",
       duration: "Jun '25 - Present",
       description: "AI-powered influencer technology platform",
       tech: ["Node.js", "Replit"],
