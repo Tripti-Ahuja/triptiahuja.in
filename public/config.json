@@ -1,0 +1,189 @@
+{
+  "personal": {
+    "name": "Reeshabh Kumar Ranjan",
+    "title": "0→1 Engineer",
+    "description": {
+      "highlights": ["AI, AWS, Python, LLMs, and SaaS"],
+      "specialization": "0→1 product development",
+      "experience": "YC and Sequoia-backed startups",
+      "expertise": "Former founding engineer with expertise in early-stage, founding team environments"
+    },
+    "location": "Remote",
+    "stats": {
+      "yearsExperience": "5+",
+      "companies": 8,
+      "foundingRoles": 4
+    }
+  },
+  "contact": {
+    "email": "reeshabhkumarranjan@gmail.com",
+    "telegram": "https://t.me/whadupdog",
+    "github": "https://github.com/reeshabhranjan",
+    "linkedin": "https://linkedin.com/in/reeshabh"
+  },
+  "calendly": {
+    "url": "https://calendly.com/reeshabhkumarranjan/30min",
+    "title": "Schedule a Call"
+  },
+  "experiences": [
+    {
+      "company": "Deeptune",
+      "companyUrl": "https://deeptune.ai",
+      "companyLogo": "/logos/deeptune.jpg",
+      "logoColor": "bg-white",
+      "position": "Senior Software Engineer",
+      "duration": "Jun '25 - Present",
+      "description": "AI-driven solutions and machine learning applications development",
+      "tech": ["AI/ML", "Python", "LLMs"],
+      "tags": ["AI", "New York", "Remote"]
+    },
+    {
+      "company": "Hook",
+      "companyUrl": "https://askhook.com",
+      "companyLogo": "/logos/hook.jpg",
+      "logoColor": "bg-white",
+      "position": "Senior Software Engineer",
+      "duration": "Jun '25 - Present",
+      "description": "AI-powered influencer technology platform",
+      "tech": ["Node.js", "Replit"],
+      "tags": ["AI", "London", "InfluencerTech"]
+    },
+    {
+      "company": "ScaleXP",
+      "companyUrl": "https://scalexp.com",
+      "companyLogo": "/logos/scalexp.jpg",
+      "logoColor": "bg-white",
+      "position": "Senior Software Engineer",
+      "duration": "Jan '25 - May '25",
+      "description": "Backend development and system architecture for scaling enterprise solutions",
+      "tech": ["Python", "Node.js", "AWS", "PostgreSQL"],
+      "tags": ["London", "FinTech", "Remote"]
+    },
+    {
+      "company": "Multithread",
+      "companyUrl": "https://multithread.ai",
+      "companyLogo": "/logos/multithread.jpg",
+      "logoColor": "bg-white",
+      "position": "Senior Software Engineer",
+      "duration": "May '24 - Dec '24",
+      "description": "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
+      "tech": ["TypeScript", "AWS ECS", "GCP", "Node.js", "PostgreSQL"],
+      "tags": ["Founding", "Tech Lead", "San Francisco", "MusicTech", "Remote"]
+    },
+    {
+      "company": "TradeTechSolutions",
+      "companyUrl": "https://tradetechsolutions.io",
+      "companyLogo": "/logos/tradetechsolutions.jpg",
+      "logoColor": "bg-white",
+      "position": "Senior Software Engineer",
+      "duration": "Mar '24 - May '24",
+      "description": "Developed trading application achieving $1M+ ARR",
+      "highlight": "$1M+ ARR",
+      "tech": ["Python", "Trading APIs", "Real-time Systems"],
+      "tags": ["Founding", "UAE", "FinTech", "Remote"]
+    },
+    {
+      "company": "nsave",
+      "companyUrl": "https://nsave.com",
+      "companyLogo": "/logos/nsave.jpg",
+      "logoColor": "bg-white",
+      "position": "Founding Software Engineer",
+      "duration": "Mar '23 - Mar '24",
+      "highlight": "YC 2022 | Sequoia Capital",
+      "description": "First engineer, 0->1 product development. Built core FinTech infrastructure from ground up",
+      "tech": ["NestJS", "Apache Kafka", "PostgreSQL", "Microservices"],
+      "tags": ["YC 2022", "Sequoia", "Founding", "London", "FinTech", "Remote"]
+    },
+    {
+      "company": "MathWorks",
+      "companyUrl": "https://mathworks.com",
+      "companyLogo": "/logos/mathworks.jpg",
+      "logoColor": "bg-white",
+      "position": "Software Engineer",
+      "duration": "Jul '21 - Mar '23",
+      "description": "Infrastructure automation, cloud migration, and internal tooling development",
+      "tech": ["Python", "Docker", "Ansible", "Hashicorp Vault", "AWS"],
+      "tags": ["BigTech", "Bangalore", "Scientific", "Remote"]
+    },
+    {
+      "company": "OffTrade",
+      "companyLogo": "/logos/offtrade.jpg",
+      "logoColor": "bg-white",
+      "position": "CTO",
+      "duration": "Jan '20 - Jun '21",
+      "description": "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
+      "tech": ["Django", "FastAPI", "AWS", "Redis"],
+      "tags": ["Founder", "Bangalore", "FinTech", "Remote"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Research Mentoring Platform",
+      "description": "Backend for mentorship platform handed over to ACM India. Mentored 6 interns over 1.5 years.",
+      "tech": ["Django", "DRF"],
+      "type": "Open Source",
+      "icon": "award"
+    },
+    {
+      "name": "Academic Portal IIIT-Delhi",
+      "description": "Self Growth & Community Work registration system serving the academic department daily.",
+      "tech": ["Django", "DRF"],
+      "users": "3K+ users",
+      "icon": "users"
+    },
+    {
+      "name": "OSRTC Bus Ticketing",
+      "description": "State government bus ticketing system for Odisha, India.",
+      "tech": ["Django", "DRF"],
+      "client": "Government",
+      "icon": "building"
+    }
+  ],
+  "startupExpertise": [
+    "0→1 Product Development",
+    "YC & Sequoia Experience",
+    "Founding Team Member",
+    "Early Stage Specialist"
+  ],
+  "domainExpertise": [
+    "AI/ML & LLM Integration",
+    "FinTech & Trading Systems",
+    "Music & Productivity Tech",
+    "AWS & Cloud Infrastructure",
+    "... and anything else you need"
+  ],
+  "skills": {
+    "aiLanguages": ["Python", "LLMs", "AI/ML", "TypeScript", "JavaScript"],
+    "saasFrameworks": ["Django", "FastAPI", "NestJS", "Node.js", "SaaS"],
+    "cloud": ["AWS", "GCP", "Docker", "Kafka", "PostgreSQL"]
+  },
+  "publication": {
+    "title": "VoIP Vanguard: Defense Against VoIP Attacks in Tor",
+    "url": "https://link.springer.com/chapter/10.1007/978-981-96-3531-3_16",
+    "venue": "NSS-SocialSec 2024"
+  },
+  "education": {
+    "degree": "B.Tech Computer Science",
+    "institution": "IIIT Delhi",
+    "institutionUrl": "https://iiitd.ac.in",
+    "cgpa": "9.01/10",
+    "duration": "2017-2021"
+  },
+  "tagColors": {
+    "YC 2022": "bg-blue-100 text-blue-700",
+    "Sequoia": "bg-purple-100 text-purple-700",
+    "AI": "bg-indigo-100 text-indigo-700",
+    "Founding": "bg-orange-100 text-orange-700",
+    "Founder": "bg-red-100 text-red-700",
+    "Tech Lead": "bg-teal-100 text-teal-700",
+    "BigTech": "bg-teal-100 text-teal-700",
+    "Remote": "bg-gray-100 text-gray-700",
+    "locationTags": ["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"],
+    "industryTags": ["FinTech", "MusicTech", "Scientific", "InfluencerTech"]
+  },
+  "projectIconColors": {
+    "award": "text-blue-500",
+    "users": "text-green-500",
+    "building": "text-purple-500"
+  }
+}

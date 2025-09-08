@@ -1,123 +1,34 @@
 import React from 'react';
-import { Mail, Github, Linkedin, MapPin, ExternalLink, Calendar, Building, Award, Users, TrendingUp, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, MessageCircle, Award, Users, Building } from 'lucide-react';
 import CalendlyEmbed from './CalendlyEmbed';
+import { Config } from '../utils/configLoader';
 
-const Header: React.FC = () => {
-  const experiences = [
-    {
-      company: "Deeptune",
-      companyUrl: "https://deeptune.ai",
-      companyLogo: "/logos/deeptune.jpg",
-      logoColor: "bg-white",
-      position: "Senior Software Engineer",
-      duration: "Jun '25 - Present",
-      description: "AI-driven solutions and machine learning applications development",
-      tech: ["AI/ML", "Python", "LLMs"],
-      tags: ["AI", "New York", "Remote"]
-    },
-    {
-      company: "Hook",
-      companyUrl: "https://askhook.com",
-      companyLogo: "/logos/hook.jpg",
-      logoColor: "bg-white",
-      position: "Senior Software Engineer",
-      duration: "Jun '25 - Present",
-      description: "AI-powered influencer technology platform",
-      tech: ["Node.js", "Replit"],
-      tags: ["AI", "London", "InfluencerTech"]
-    },
-    {
-      company: "ScaleXP",
-      companyUrl: "https://scalexp.com",
-      companyLogo: "/logos/scalexp.jpg",
-      logoColor: "bg-white",
-      position: "Senior Software Engineer",
-      duration: "Jan '25 - May '25",
-      description: "Backend development and system architecture for scaling enterprise solutions",
-      tech: ["Python", "Node.js", "AWS", "PostgreSQL"],
-      tags: ["London", "FinTech", "Remote"]
-    },
-    {
-      company: "Multithread",
-      companyUrl: "https://multithread.ai",
-      companyLogo: "/logos/multithread.jpg",
-      logoColor: "bg-white",
-      position: "Senior Software Engineer", 
-      duration: "May '24 - Dec '24",
-      description: "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
-      tech: ["TypeScript", "AWS ECS", "GCP", "Node.js", "PostgreSQL"],
-      tags: ["Founding", "Tech Lead", "San Francisco", "MusicTech", "Remote"]
-    },
-    {
-      company: "TradeTechSolutions",
-      companyUrl: "https://tradetechsolutions.io",
-      companyLogo: "/logos/tradetechsolutions.jpg",
-      logoColor: "bg-white",
-      position: "Senior Software Engineer",
-      duration: "Mar '24 - May '24",
-      description: "Developed trading application achieving $1M+ ARR",
-      highlight: "$1M+ ARR",
-      tech: ["Python", "Trading APIs", "Real-time Systems"],
-      tags: ["Founding", "UAE", "FinTech", "Remote"]
-    },
-    {
-      company: "nsave",
-      companyUrl: "https://nsave.com",
-      companyLogo: "/logos/nsave.jpg",
-      logoColor: "bg-white",
-      position: "Founding Software Engineer",
-      duration: "Mar '23 - Mar '24",
-      highlight: "YC 2022 | Sequoia Capital",
-      description: "First engineer, 0->1 product development. Built core FinTech infrastructure from ground up",
-      tech: ["NestJS", "Apache Kafka", "PostgreSQL", "Microservices"],
-      tags: ["YC 2022", "Sequoia", "Founding", "London", "FinTech", "Remote"]
-    },
-    {
-      company: "MathWorks",
-      companyUrl: "https://mathworks.com",
-      companyLogo: "/logos/mathworks.jpg",
-      logoColor: "bg-white",
-      position: "Software Engineer",
-      duration: "Jul '21 - Mar '23",
-      description: "Infrastructure automation, cloud migration, and internal tooling development",
-      tech: ["Python", "Docker", "Ansible", "Hashicorp Vault", "AWS"],
-      tags: ["BigTech", "Bangalore", "Scientific", "Remote"]
-    },
-    {
-      company: "OffTrade",
-      companyLogo: "/logos/offtrade.jpg",
-      logoColor: "bg-white",
-      position: "CTO",
-      duration: "Jan '20 - Jun '21",
-      description: "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
-      tech: ["Django", "FastAPI", "AWS", "Redis"],
-      tags: ["Founder", "Bangalore", "FinTech", "Remote"]
-    }
-  ];
+interface HeaderProps {
+  config: Config;
+}
 
-  const projects = [
-    {
-      name: "Research Mentoring Platform",
-      description: "Backend for mentorship platform handed over to ACM India. Mentored 6 interns over 1.5 years.",
-      tech: ["Django", "DRF"],
-      type: "Open Source",
-      icon: <Award className="text-blue-500" size={16} />
-    },
-    {
-      name: "Academic Portal IIIT-Delhi",
-      description: "Self Growth & Community Work registration system serving the academic department daily.",
-      tech: ["Django", "DRF"],
-      users: "3K+ users",
-      icon: <Users className="text-green-500" size={16} />
-    },
-    {
-      name: "OSRTC Bus Ticketing",
-      description: "State government bus ticketing system for Odisha, India.",
-      tech: ["Django", "DRF"],
-      client: "Government",
-      icon: <Building className="text-purple-500" size={16} />
+const Header: React.FC<HeaderProps> = ({ config }) => {
+  const getTagStyle = (tag: string): string => {
+    if (config.tagColors[tag]) return config.tagColors[tag];
+    if (config.tagColors.locationTags?.includes(tag)) return "bg-yellow-100 text-yellow-700";
+    if (config.tagColors.industryTags?.includes(tag)) return "bg-green-100 text-green-700";
+    if (tag.includes("$1M")) return "bg-emerald-100 text-emerald-700";
+    return "bg-slate-100 text-slate-700";
+  };
+
+  const getProjectIcon = (iconType: string) => {
+    const iconClass = config.projectIconColors[iconType] || "text-gray-500";
+    switch(iconType) {
+      case 'award':
+        return <Award className={iconClass} size={16} />;
+      case 'users':
+        return <Users className={iconClass} size={16} />;
+      case 'building':
+        return <Building className={iconClass} size={16} />;
+      default:
+        return null;
     }
-  ];
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
@@ -127,43 +38,43 @@ const Header: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-8 md:mb-12">
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">
-              Reeshabh Kumar Ranjan
+              {config.personal.name}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-4">0→1 Engineer</p>
+            <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
-              Experienced in <span className="font-semibold text-slate-700">AI, AWS, Python, LLMs, and SaaS</span> development. 
-              Specialized in <span className="font-semibold text-slate-700">0→1 product development</span> at 
-              <span className="font-semibold text-slate-700"> YC and Sequoia-backed startups</span>. 
-              Former founding engineer with expertise in early-stage, founding team environments.
+              Experienced in <span className="font-semibold text-slate-700">{config.personal.description.highlights.join(', ')}</span> development. 
+              Specialized in <span className="font-semibold text-slate-700"> {config.personal.description.specialization}</span> at 
+              <span className="font-semibold text-slate-700"> {config.personal.description.experience}</span>. 
+              {config.personal.description.expertise}
             </p>
           </div>
 
           {/* Contact Bar */}
           <div className="flex flex-col items-center gap-3 md:gap-4 mb-8 md:mb-10 px-2">
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 max-w-full">
-              <a href="mailto:reeshabhkumarranjan@gmail.com" 
+              <a href={`mailto:${config.contact.email}`} 
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <Mail size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">Email</span>
               </a>
-              <a href="https://t.me/whadupdog" target="_blank" rel="noopener noreferrer"
+              <a href={config.contact.telegram} target="_blank" rel="noopener noreferrer"
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <MessageCircle size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">Telegram</span>
               </a>
-              <a href="https://github.com/reeshabhranjan" target="_blank" rel="noopener noreferrer"
+              <a href={config.contact.github} target="_blank" rel="noopener noreferrer"
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <Github size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">GitHub</span>
               </a>
-              <a href="https://linkedin.com/in/reeshabh" target="_blank" rel="noopener noreferrer"
+              <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer"
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <Linkedin size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">LinkedIn</span>
               </a>
               <div className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
                 <MapPin size={14} className="text-slate-600 md:w-4 md:h-4" />
-                <span className="text-xs md:text-sm text-slate-700">Remote</span>
+                <span className="text-xs md:text-sm text-slate-700">{config.personal.location}</span>
               </div>
             </div>
           </div>
@@ -171,15 +82,15 @@ const Header: React.FC = () => {
           {/* Stats */}
           <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12 px-4">
             <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">5+</div>
+              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.yearsExperience}</div>
               <div className="text-xs sm:text-sm text-slate-600">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">8</div>
+              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.companies}</div>
               <div className="text-xs sm:text-sm text-slate-600">Companies</div>
             </div>
             <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">4</div>
+              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.foundingRoles}</div>
               <div className="text-xs sm:text-sm text-slate-600">Founding Roles</div>
             </div>
           </div>
@@ -196,7 +107,7 @@ const Header: React.FC = () => {
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 md:mb-6">Experience</h2>
                 <div className="space-y-3 md:space-y-4">
-                  {experiences.map((exp, index) => (
+                  {config.experiences.map((exp, index) => (
                     <div key={index} className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200 hover:shadow-md transition-all">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
                         <div className="flex-1">
@@ -215,7 +126,7 @@ const Header: React.FC = () => {
                                   }}
                                 />
                               ) : (
-                                <span className="text-white font-semibold text-xs">{exp.companyLogo}</span>
+                                <span className="text-white font-semibold text-xs">{exp.companyLogo || exp.company.charAt(0)}</span>
                               )}
                             </div>
                             {exp.companyUrl ? (
@@ -230,30 +141,14 @@ const Header: React.FC = () => {
                             ) : (
                               <span className="text-sm md:text-base bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent font-medium">{exp.company}</span>
                             )}
-                            {exp.tags && exp.tags.map((tag, tagIndex) => {
-                              let tagStyle = "px-2 py-1 text-xs rounded-full font-medium";
-                              if (tag === "YC 2022") tagStyle += " bg-blue-100 text-blue-700";
-                              else if (tag === "Sequoia") tagStyle += " bg-purple-100 text-purple-700";
-                              else if (tag.includes("$1M")) tagStyle += " bg-emerald-100 text-emerald-700";
-                              else if (tag === "AI") tagStyle += " bg-indigo-100 text-indigo-700";
-                              else if (tag === "Founding") tagStyle += " bg-orange-100 text-orange-700";
-                              else if (tag === "Founder") tagStyle += " bg-red-100 text-red-700";
-                              else if (tag === "Tech Lead") tagStyle += " bg-teal-100 text-teal-700";
-                              else if (tag === "BigTech") tagStyle += " bg-teal-100 text-teal-700";
-                              else if (tag === "Remote") tagStyle += " bg-gray-100 text-gray-700";
-                              else if (["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"].includes(tag)) tagStyle += " bg-yellow-100 text-yellow-700";
-                              else if (["FinTech", "MusicTech", "Scientific", "InfluencerTech"].includes(tag)) tagStyle += " bg-green-100 text-green-700";
-                              else tagStyle += " bg-slate-100 text-slate-700";
-                              
-                              return (
-                                <span key={tagIndex} className={tagStyle}>
-                                  {tag}
-                                </span>
-                              );
-                            })}
+                            {exp.tags && exp.tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className={`px-2 py-1 text-xs rounded-full font-medium ${getTagStyle(tag)}`}>
+                                {tag}
+                              </span>
+                            ))}
                           </div>
                         </div>
-                        <span className="text-xs md:text-sm text-white font-medium whitespace-nowrap">{exp.duration}</span>
+                        <span className="text-xs md:text-sm text-slate-500 font-medium whitespace-nowrap">{exp.duration}</span>
                       </div>
                       <p className="text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">{exp.description}</p>
                       <div className="flex flex-wrap gap-1.5">
@@ -272,10 +167,10 @@ const Header: React.FC = () => {
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 md:mb-6">Key Projects</h2>
                 <div className="space-y-3 md:space-y-4">
-                  {projects.map((project, index) => (
+                  {config.projects.map((project, index) => (
                     <div key={index} className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200 hover:shadow-md transition-all">
                       <div className="flex items-start gap-2 md:gap-3">
-                        {project.icon}
+                        {getProjectIcon(project.icon)}
                         <div className="flex-1">
                           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
                             <h3 className="text-sm md:text-base font-semibold text-slate-900">{project.name}</h3>
@@ -314,22 +209,12 @@ const Header: React.FC = () => {
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Startup Expertise</h3>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">0→1 Product Development</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">YC & Sequoia Experience</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">Founding Team Member</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">Early Stage Specialist</span>
-                  </div>
+                  {config.startupExpertise.map((item, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className={`w-2 h-2 ${['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500'][index % 4]} rounded-full flex-shrink-0`}></div>
+                      <span className="text-slate-700 text-xs md:text-sm">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -337,26 +222,12 @@ const Header: React.FC = () => {
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4">Domain Expertise</h3>
                 <div className="space-y-2.5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">AI/ML & LLM Integration</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">FinTech & Trading Systems</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">Music & Productivity Tech</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">AWS & Cloud Infrastructure</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
-                    <span className="text-slate-700 text-xs md:text-sm">... and anything else you need</span>
-                  </div>
+                  {config.domainExpertise.map((item, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className={`w-2 h-2 ${['bg-blue-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500', 'bg-red-500'][index % 5]} rounded-full flex-shrink-0`}></div>
+                      <span className="text-slate-700 text-xs md:text-sm">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -367,7 +238,7 @@ const Header: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">AI & Languages</h4>
                     <div className="flex flex-wrap gap-1.5">
-                      {["Python", "LLMs", "AI/ML", "TypeScript", "JavaScript"].map((skill, index) => (
+                      {config.skills.aiLanguages.map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
                           {skill}
                         </span>
@@ -377,7 +248,7 @@ const Header: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">SaaS & Frameworks</h4>
                     <div className="flex flex-wrap gap-1.5">
-                      {["Django", "FastAPI", "NestJS", "Node.js", "SaaS"].map((skill, index) => (
+                      {config.skills.saasFrameworks.map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-green-50 text-green-700 rounded text-xs">
                           {skill}
                         </span>
@@ -387,7 +258,7 @@ const Header: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">Cloud</h4>
                     <div className="flex flex-wrap gap-1.5">
-                      {["AWS", "GCP", "Docker", "Kafka", "PostgreSQL"].map((skill, index) => (
+                      {config.skills.cloud.map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-purple-50 text-purple-700 rounded text-xs">
                           {skill}
                         </span>
@@ -402,11 +273,11 @@ const Header: React.FC = () => {
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Publication</h3>
                 <div>
                   <h4 className="font-medium text-slate-900 text-xs md:text-sm leading-tight mb-1">
-                    <a href="https://link.springer.com/chapter/10.1007/978-981-96-3531-3_16" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      VoIP Vanguard: Defense Against VoIP Attacks in Tor
+                    <a href={config.publication.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      {config.publication.title}
                     </a>
                   </h4>
-                  <p className="text-slate-600 text-xs">NSS-SocialSec 2024</p>
+                  <p className="text-slate-600 text-xs">{config.publication.venue}</p>
                 </div>
               </div>
 
@@ -414,18 +285,18 @@ const Header: React.FC = () => {
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Education</h3>
                 <div>
-                  <h4 className="font-medium text-slate-900 text-xs md:text-sm">B.Tech Computer Science</h4>
+                  <h4 className="font-medium text-slate-900 text-xs md:text-sm">{config.education.degree}</h4>
                   <p className="text-slate-600 text-xs md:text-sm">
-                    <a href="https://iiitd.ac.in" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      IIIT Delhi
+                    <a href={config.education.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      {config.education.institution}
                     </a>
                   </p>
-                  <p className="text-slate-500 text-xs">CGPA: 9.01/10 • 2017-2021</p>
+                  <p className="text-slate-500 text-xs">CGPA: {config.education.cgpa} • {config.education.duration}</p>
                 </div>
               </div>
 
               {/* Calendly Embed */}
-              <CalendlyEmbed />
+              <CalendlyEmbed config={config.calendly} />
             </div>
           </div>
         </div>

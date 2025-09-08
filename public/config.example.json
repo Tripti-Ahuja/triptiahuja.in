@@ -1,0 +1,112 @@
+{
+  "personal": {
+    "name": "Jane Smith",
+    "title": "Full Stack Developer",
+    "description": {
+      "highlights": ["React, Node.js, Python"],
+      "specialization": "scalable web applications",
+      "experience": "Fortune 500 companies",
+      "expertise": "Expert in building high-performance applications with modern tech stacks"
+    },
+    "location": "San Francisco, CA",
+    "stats": {
+      "yearsExperience": "8+",
+      "companies": 5,
+      "foundingRoles": 2
+    }
+  },
+  "contact": {
+    "email": "jane.smith@example.com",
+    "telegram": "https://t.me/janesmith",
+    "github": "https://github.com/janesmith",
+    "linkedin": "https://linkedin.com/in/janesmith"
+  },
+  "calendly": {
+    "url": "https://calendly.com/janesmith/consultation",
+    "title": "Book a Consultation"
+  },
+  "experiences": [
+    {
+      "company": "TechCorp",
+      "companyUrl": "https://techcorp.com",
+      "companyLogo": "T",
+      "logoColor": "bg-blue-600",
+      "position": "Senior Software Engineer",
+      "duration": "Jan '23 - Present",
+      "description": "Leading frontend architecture for enterprise SaaS platform",
+      "tech": ["React", "TypeScript", "GraphQL", "AWS"],
+      "tags": ["Enterprise", "San Francisco", "SaaS"]
+    },
+    {
+      "company": "StartupXYZ",
+      "companyUrl": "https://startupxyz.com",
+      "companyLogo": "S",
+      "logoColor": "bg-green-600",
+      "position": "Founding Engineer",
+      "duration": "Jun '21 - Dec '22",
+      "description": "Built MVP from scratch, scaled to 10K+ users",
+      "tech": ["Node.js", "PostgreSQL", "Docker", "React"],
+      "tags": ["Founding", "Startup", "Remote"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open Source CMS",
+      "description": "Modern content management system with 500+ GitHub stars",
+      "tech": ["Next.js", "Prisma", "PostgreSQL"],
+      "type": "Open Source",
+      "icon": "award"
+    },
+    {
+      "name": "E-commerce Platform",
+      "description": "Full-stack platform processing $2M+ in transactions",
+      "tech": ["React", "Node.js", "Stripe"],
+      "users": "5K+ merchants",
+      "icon": "users"
+    }
+  ],
+  "startupExpertise": [
+    "MVP Development",
+    "Technical Architecture",
+    "Team Building",
+    "Product Strategy"
+  ],
+  "domainExpertise": [
+    "E-commerce Solutions",
+    "SaaS Platforms",
+    "API Design",
+    "Cloud Architecture",
+    "Performance Optimization"
+  ],
+  "skills": {
+    "aiLanguages": ["JavaScript", "TypeScript", "Python", "Go"],
+    "saasFrameworks": ["React", "Next.js", "Express", "FastAPI"],
+    "cloud": ["AWS", "Vercel", "Docker", "Kubernetes", "PostgreSQL"]
+  },
+  "publication": {
+    "title": "Scaling Microservices in Production",
+    "url": "https://medium.com/@janesmith/scaling-microservices",
+    "venue": "Tech Blog 2023"
+  },
+  "education": {
+    "degree": "B.S. Computer Science",
+    "institution": "Stanford University",
+    "institutionUrl": "https://stanford.edu",
+    "cgpa": "3.8/4.0",
+    "duration": "2012-2016"
+  },
+  "tagColors": {
+    "Enterprise": "bg-blue-100 text-blue-700",
+    "Founding": "bg-orange-100 text-orange-700",
+    "Startup": "bg-purple-100 text-purple-700",
+    "Remote": "bg-gray-100 text-gray-700",
+    "SaaS": "bg-green-100 text-green-700",
+    "locationTags": ["San Francisco", "New York", "Remote"],
+    "industryTags": ["SaaS", "E-commerce", "Enterprise"]
+  },
+  "projectIconColors": {
+    "award": "text-blue-500",
+    "users": "text-green-500",
+    "building": "text-purple-500"
+  }
+}

@@ -1,7 +1,16 @@
 import React, { useEffect } from 'react';
 import { Calendar } from 'lucide-react';
 
-const CalendlyEmbed: React.FC = () => {
+interface CalendlyConfig {
+  url: string;
+  title: string;
+}
+
+interface CalendlyEmbedProps {
+  config: CalendlyConfig;
+}
+
+const CalendlyEmbed: React.FC<CalendlyEmbedProps> = ({ config }) => {
   useEffect(() => {
     // Load Calendly widget script
     const script = document.createElement('script');
@@ -18,13 +27,13 @@ const CalendlyEmbed: React.FC = () => {
     <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
       <div className="flex items-center gap-2 mb-3">
         <Calendar size={16} className="text-slate-600" />
-        <h3 className="text-base md:text-lg font-semibold text-slate-900">Schedule a Call</h3>
+        <h3 className="text-base md:text-lg font-semibold text-slate-900">{config.title}</h3>
       </div>
       
       {/* Calendly inline widget */}
       <div 
         className="calendly-inline-widget" 
-        data-url="https://calendly.com/reeshabhkumarranjan/30min"
+        data-url={config.url}
         style={{ minWidth: '280px', height: '790px' }}
       />
       
@@ -37,7 +46,7 @@ const CalendlyEmbed: React.FC = () => {
           if (window.Calendly) {
             // @ts-ignore
             window.Calendly.initPopupWidget({
-              url: 'https://calendly.com/reeshabhkumarranjan/30min'
+              url: config.url
             });
           }
         }}
