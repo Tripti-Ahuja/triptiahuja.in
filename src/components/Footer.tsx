@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center justify-center gap-2 text-slate-400">
               <span>Built with</span>
               <Heart className="text-red-500" size={16} />
-              <span>by Reeshabh Kumar Ranjan</span>
+              <span>by Tripti Ahuja</span>
             </div>
             <p className="text-slate-500 mt-2">
               © 2025 All rights reserved.

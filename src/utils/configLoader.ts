@@ -12,7 +12,6 @@ export interface Config {
     stats: {
       yearsExperience: string;
       companies: number;
-      foundingRoles: number;
     };
   };
   contact: {

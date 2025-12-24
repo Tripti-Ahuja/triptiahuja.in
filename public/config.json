@@ -1,7 +1,7 @@
 {
   "personal": {
-    "name": "Reeshabh Kumar Ranjan",
-    "title": "0→1 Engineer",
+    "name": "Tripti Ahuja",
+    "title": "Data & Cloud Engineer",
     "description": {
       "highlights": ["AI, AWS, Python, LLMs, and SaaS"],
       "specialization": "0→1 product development",
@@ -10,165 +10,161 @@
     },
     "location": "Remote",
     "stats": {
-      "yearsExperience": "5+",
-      "companies": 8,
-      "foundingRoles": 4
+      "yearsExperience": "8+",
+      "companies": 5
     }
   },
   "contact": {
-    "email": "reeshabhkumarranjan@gmail.com",
-    "telegram": "https://t.me/whadupdog",
-    "github": "https://github.com/reeshabhranjan",
-    "linkedin": "https://linkedin.com/in/reeshabh"
+    "email": "triptiahuja27@gmail.com",
+    "telegram": "https://t.me/TripA1996",
+    "github": "https://github.com/Tripti-Ahuja",
+    "linkedin": "https://www.linkedin.com/in/tripti-ahuja-a88002122/"
   },
   "calendly": {
-    "url": "https://calendly.com/reeshabhkumarranjan/30min",
+    "url": "https://calendly.com/triptiahuja27/30min",
     "title": "Schedule a Call"
   },
   "experiences": [
     {
-      "company": "Deeptune",
-      "companyUrl": "https://deeptune.ai",
-      "companyLogo": "/logos/deeptune.jpg",
+      "company": "Mphasis",
+      "companyUrl": "https://mphasis.com",
+      "companyLogo": "/logos/mphasis.png",
       "logoColor": "bg-white",
-      "position": "Senior Software Engineer",
-      "duration": "Jun '25 - Present",
-      "description": "AI-driven solutions and machine learning applications development",
-      "tech": ["AI/ML", "Python", "LLMs"],
-      "tags": ["AI", "New York", "Remote"]
+      "position": "Senior Analytics and Cloud Engineer",
+      "duration": "Jan '23 - Present",
+      "description": "Python-based analytics and cloud data platforms across AWS and Azure, focused on building scalable, reliable data systems.",
+      "tech": ["Python", "AWS", "Azure", "Analytics"],
+      "tags": ["Bangalore", "Remote"]
     },
     {
-      "company": "Hook",
-      "companyUrl": "https://askhook.com",
-      "companyLogo": "/logos/hook.jpg",
+      "company": "One Network Enterprises",
+      "companyUrl": "https://onenetwork.com",
+      "companyLogo": "/logos/one.png",
       "logoColor": "bg-white",
-      "position": "Senior Software Engineer",
-      "duration": "Jun '25 - Present",
-      "description": "AI-powered influencer technology platform",
-      "tech": ["Node.js", "Replit"],
-      "tags": ["AI", "London", "InfluencerTech"]
+      "position": "Senior Analytics Engineer",
+      "duration": "Oct '22 - Dec '22",
+      "description": "Built consumer credit risk models and analytics pipelines for auto lending decisions. Developed predictive scoring systems and real-time risk assessment dashboards.",
+      "tech": ["Python", "SQL", "AWS", "Analytics"],
+      "tags": ["California", "FinTech", "AutoTech", "Freelancing"]
     },
     {
-      "company": "ScaleXP",
-      "companyUrl": "https://scalexp.com",
-      "companyLogo": "/logos/scalexp.jpg",
+      "company": "Ultimate Kronos Group",
+      "companyUrl": "https://ukg.com",
+      "companyLogo": "/logos/ukg.png",
       "logoColor": "bg-white",
-      "position": "Senior Software Engineer",
-      "duration": "Jan '25 - May '25",
-      "description": "Backend development and system architecture for scaling enterprise solutions",
-      "tech": ["Python", "Node.js", "AWS", "PostgreSQL"],
-      "tags": ["London", "FinTech", "Remote"]
+      "position": "Senior Analyst",
+      "duration": "Dec '19 - Oct '22",
+      "description": "Developed analytics dashboards and reporting solutions for workforce management insights. Built data pipelines and automated reporting workflows.",
+      "tech": ["SQL", "Tableau", "Azure", "Analytics", "ADF"],
+      "tags": ["Noida", "HR Tech"]
     },
     {
-      "company": "Multithread",
-      "companyUrl": "https://multithread.ai",
-      "companyLogo": "/logos/multithread.jpg",
+      "company": "Accenture",
+      "companyUrl": "https://accenture.com",
+      "companyLogo": "/logos/accenture.png",
       "logoColor": "bg-white",
-      "position": "Senior Software Engineer",
-      "duration": "May '24 - Dec '24",
-      "description": "Backend and DevOps for early-stage US music-tech, UK AI productivity, and Series F food-tech startups",
-      "tech": ["TypeScript", "AWS ECS", "GCP", "Node.js", "PostgreSQL"],
-      "tags": ["Founding", "Tech Lead", "San Francisco", "MusicTech", "Remote"]
+      "position": "Data Analyst",
+      "duration": "Jan '17 - Dec '19",
+      "description": "Delivered data-driven insights for enterprise clients across industries. Built dashboards and automated reporting solutions to support strategic decision-making.",
+      "tech": ["SQL", "Tableau", "Power BI"],
+      "tags": ["Noida", "Consulting", "BigTech"]
     },
     {
-      "company": "TradeTechSolutions",
-      "companyUrl": "https://tradetechsolutions.io",
-      "companyLogo": "/logos/tradetechsolutions.jpg",
+      "company": "Reliable Allied Services",
+      "companyLogo": "/logos/ras.png",
       "logoColor": "bg-white",
-      "position": "Senior Software Engineer",
-      "duration": "Mar '24 - May '24",
-      "description": "Developed trading application achieving $1M+ ARR",
-      "highlight": "$1M+ ARR",
-      "tech": ["Python", "Trading APIs", "Real-time Systems"],
-      "tags": ["Founding", "UAE", "FinTech", "Remote"]
-    },
-    {
-      "company": "nsave",
-      "companyUrl": "https://nsave.com",
-      "companyLogo": "/logos/nsave.jpg",
-      "logoColor": "bg-white",
-      "position": "Founding Software Engineer",
-      "duration": "Mar '23 - Mar '24",
-      "highlight": "YC 2022 | Sequoia Capital",
-      "description": "First engineer, 0->1 product development. Built core FinTech infrastructure from ground up",
-      "tech": ["NestJS", "Apache Kafka", "PostgreSQL", "Microservices"],
-      "tags": ["YC 2022", "Sequoia", "Founding", "London", "FinTech", "Remote"]
-    },
-    {
-      "company": "MathWorks",
-      "companyUrl": "https://mathworks.com",
-      "companyLogo": "/logos/mathworks.jpg",
-      "logoColor": "bg-white",
-      "position": "Software Engineer",
-      "duration": "Jul '21 - Mar '23",
-      "description": "Infrastructure automation, cloud migration, and internal tooling development",
-      "tech": ["Python", "Docker", "Ansible", "Hashicorp Vault", "AWS"],
-      "tags": ["BigTech", "Bangalore", "Scientific", "Remote"]
-    },
-    {
-      "company": "OffTrade",
-      "companyLogo": "/logos/offtrade.jpg",
-      "logoColor": "bg-white",
-      "position": "CTO",
-      "duration": "Jan '20 - Jun '21",
-      "description": "Built entire backend architecture using microservices. Set up CI/CD and integrated payment systems",
-      "tech": ["Django", "FastAPI", "AWS", "Redis"],
-      "tags": ["Founder", "Bangalore", "FinTech", "Remote"]
+      "position": "Human Resources Assistant",
+      "duration": "Mar '16 - Apr '16",
+      "description": "Supported HR operations including recruitment coordination, employee onboarding, and administrative tasks.",
+      "tech": ["MS Office", "HR Systems"],
+      "tags": ["Noida", "Internship"]
     }
   ],
   "projects": [
     {
-      "name": "Research Mentoring Platform",
-      "description": "Backend for mentorship platform handed over to ACM India. Mentored 6 interns over 1.5 years.",
-      "tech": ["Django", "DRF"],
-      "type": "Open Source",
+      "name": "Corebridge Financial Analytics",
+      "description": "Served as Analytics Engineer for Corebridge consulting. Managed user provisioning, server performance, and content governance. Built automated Python workflows for data refresh and compliance reporting on AWS.",
+      "tech": ["Analytics", "Python", "AWS"],
+      "client": "Corebridge",
+      "icon": "building"
+    },
+    {
+      "name": "Bain Data & Consulting Analytics",
+      "description": "Built enterprise analytics solutions for Bain & Co. consulting engagements. Developed AWS-hosted data pipelines and Python automation for client deliverables, enabling data-driven strategic recommendations.",
+      "tech": ["Python", "AWS", "Tableau"],
+      "client": "Bain & Co.",
       "icon": "award"
     },
     {
-      "name": "Academic Portal IIIT-Delhi",
-      "description": "Self Growth & Community Work registration system serving the academic department daily.",
-      "tech": ["Django", "DRF"],
-      "users": "3K+ users",
+      "name": "Cloud Analytics Migration",
+      "description": "Migrated on-premise analytics to AWS cloud. Automated infrastructure provisioning and data workflows using Python scripts and AWS Lambda. Built and tested REST APIs with Postman for data integration, reducing manual overhead by 60%.",
+      "tech": ["AWS", "Python", "Lambda", "REST APIs", "Postman"],
+      "type": "Migration",
       "icon": "users"
     },
     {
-      "name": "OSRTC Bus Ticketing",
-      "description": "State government bus ticketing system for Odisha, India.",
-      "tech": ["Django", "DRF"],
-      "client": "Government",
-      "icon": "building"
+      "name": "UKG Center of Excellence",
+      "description": "Part of Center of Excellence team building enterprise dashboards for workforce analytics. Developed reporting solutions integrating Salesforce and Snowflake data, hosted on on-premise servers.",
+      "tech": ["SQL", "Snowflake", "Salesforce", "Tableau", "Power BI"],
+      "client": "UKG",
+      "icon": "users"
+    },
+    {
+      "name": "Neo Analytics Platform",
+      "description": "Optimized lending analytics platform hosted on AWS. Built Python automation for data quality checks and implemented secure dealer-level data segregation across 15 dashboards.",
+      "tech": ["Python", "AWS", "Analytics"],
+      "client": "Neo Analytics",
+      "icon": "award"
     }
   ],
-  "startupExpertise": [
-    "0→1 Product Development",
-    "YC & Sequoia Experience",
-    "Founding Team Member",
-    "Early Stage Specialist"
+  "featuredCredentials": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "url": "https://www.credly.com/badges/b63607fc-a7ce-46e6-97e5-725d796a9302/linked_in_profile",
+      "color": "bg-orange-500"
+    },
+    {
+      "name": "Microsoft Azure Fundamentals (AZ-900)",
+      "url": "https://learn.microsoft.com/en-us/users/triptiahuja-6690/credentials/7de1a1f0ec8fdd11",
+      "color": "bg-blue-500"
+    }
+  ],
+  "credentials": [
+    "AWS Certified Cloud Practitioner",
+    "Microsoft Certified: Azure Fundamentals",
+    "AWS Databricks Platform Architect Accreditation",
+    "Developing Applications with Apache Spark",
+    "Introduction to Apache Spark",
+    "The Complete Python Bootcamp",
+    "Google Cloud - Prompt Engineering Guide",
+    "Introduction to Generative AI"
   ],
   "domainExpertise": [
-    "AI/ML & LLM Integration",
-    "FinTech & Trading Systems",
-    "Music & Productivity Tech",
-    "AWS & Cloud Infrastructure",
-    "... and anything else you need"
+    "Data Analytics, AI & Prompt Engineering",
+    "AWS & Azure Cloud Infrastructure",
+    "Consulting & Product Analytics",
+    "FinTech, HR & Lending Analytics",
+    "... and everything else you need"
   ],
   "skills": {
-    "aiLanguages": ["Python", "LLMs", "AI/ML", "TypeScript", "JavaScript"],
-    "saasFrameworks": ["Django", "FastAPI", "NestJS", "Node.js", "SaaS"],
-    "cloud": ["AWS", "GCP", "Docker", "Kafka", "PostgreSQL"]
+    "aiLanguages": ["Python", "SQL", "Data Modelling", "ETL", "Apache Spark"],
+    "saasFrameworks": ["PostgreSQL", "Salesforce", "ADF", "Datawarehouse", "Databricks", "S3"],
+    "cloud": ["AWS", "Azure", "Airflow", "Databricks", "PostgreSQL"]
   },
-  "publication": {
-    "title": "VoIP Vanguard: Defense Against VoIP Attacks in Tor",
-    "url": "https://link.springer.com/chapter/10.1007/978-981-96-3531-3_16",
-    "venue": "NSS-SocialSec 2024"
-  },
-  "education": {
-    "degree": "B.Tech Computer Science",
-    "institution": "IIIT Delhi",
-    "institutionUrl": "https://iiitd.ac.in",
-    "cgpa": "9.01/10",
-    "duration": "2017-2021"
-  },
+  "education": [
+    {
+      "degree": "PGDBA",
+      "institution": "Symbiosis Centre for Distance Learning",
+      "institutionUrl": "https://scdl.net",
+      "duration": "2017-2019"
+    },
+    {
+      "degree": "BBA",
+      "institution": "Mahatma Gandhi University",
+      "institutionUrl": "https://mgu.ac.in",
+      "duration": "2013-2016"
+    }
+  ],
   "tagColors": {
     "YC 2022": "bg-blue-100 text-blue-700",
     "Sequoia": "bg-purple-100 text-purple-700",
@@ -178,8 +174,8 @@
     "Tech Lead": "bg-teal-100 text-teal-700",
     "BigTech": "bg-teal-100 text-teal-700",
     "Remote": "bg-gray-100 text-gray-700",
-    "locationTags": ["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore"],
-    "industryTags": ["FinTech", "MusicTech", "Scientific", "InfluencerTech"]
+    "locationTags": ["New York", "London", "San Francisco", "UAE", "Boston", "Bangalore", "Noida", "California"],
+    "industryTags": ["FinTech", "MusicTech", "Scientific", "InfluencerTech", "Consulting"]
   },
   "projectIconColors": {
     "award": "text-blue-500",

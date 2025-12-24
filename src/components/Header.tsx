@@ -42,10 +42,9 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
-              Experienced in <span className="font-semibold text-slate-700">{config.personal.description.highlights.join(', ')}</span> development. 
-              Specialized in <span className="font-semibold text-slate-700"> {config.personal.description.specialization}</span> at 
-              <span className="font-semibold text-slate-700"> {config.personal.description.experience}</span>. 
-              {config.personal.description.expertise}
+              Experienced in <span className="font-semibold text-slate-700">Data Analytics, Python, and Cloud Engineering (AWS & Azure)</span>. 
+              Specialized in <span className="font-semibold text-slate-700">building scalable data pipelines, analytics platforms, and cloud-native solutions</span>. 
+              Certified AWS Cloud Practitioner and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across analytics, data engineering, and cloud infrastructure.
             </p>
           </div>
 
@@ -80,7 +79,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
           </div>
 
           {/* Stats */}
-          <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12 px-4">
+          <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-6 md:mb-8 px-4">
             <div className="text-center">
               <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.yearsExperience}</div>
               <div className="text-xs sm:text-sm text-slate-600">Years Experience</div>
@@ -89,9 +88,29 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
               <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.companies}</div>
               <div className="text-xs sm:text-sm text-slate-600">Companies</div>
             </div>
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.foundingRoles}</div>
-              <div className="text-xs sm:text-sm text-slate-600">Founding Roles</div>
+          </div>
+
+          {/* Featured Credentials - Card Style with Images */}
+          <div className="mb-8 md:mb-12 px-4">
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href={config.featuredCredentials[0]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+                <div className="flex items-center gap-3">
+                  <img src="/logos/AWS.jpg" alt="AWS" className="w-12 h-12 rounded-lg object-cover" />
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm">AWS Certified</p>
+                    <p className="text-xs text-slate-600">Cloud Practitioner</p>
+                  </div>
+                </div>
+              </a>
+              <a href={config.featuredCredentials[1]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+                <div className="flex items-center gap-3">
+                  <img src="/logos/microsoft.jpg" alt="Microsoft" className="w-12 h-12 rounded-lg object-cover" />
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm">Microsoft Azure</p>
+                    <p className="text-xs text-slate-600">Fundamentals (AZ-900)</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -205,11 +224,11 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             {/* Sidebar */}
             <div className="lg:col-span-2 space-y-4 md:space-y-6 lg:mt-12 xl:mt-14">
               
-              {/* Startup Experience Highlight */}
+              {/* Credentials */}
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
-                <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Startup Expertise</h3>
+                <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Credentials</h3>
                 <div className="space-y-2">
-                  {config.startupExpertise.map((item, index) => (
+                  {config.credentials.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <div className={`w-2 h-2 ${['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500'][index % 4]} rounded-full flex-shrink-0`}></div>
                       <span className="text-slate-700 text-xs md:text-sm">{item}</span>
@@ -236,7 +255,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3 md:mb-4">Core Technologies</h3>
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">AI & Languages</h4>
+                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">Data Engineering & Analytics</h4>
                     <div className="flex flex-wrap gap-1.5">
                       {config.skills.aiLanguages.map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
@@ -246,7 +265,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">SaaS & Frameworks</h4>
+                    <h4 className="font-medium text-slate-700 mb-2 text-xs md:text-sm">Databases & Storage</h4>
                     <div className="flex flex-wrap gap-1.5">
                       {config.skills.saasFrameworks.map((skill, index) => (
                         <span key={index} className="px-2 py-1 bg-green-50 text-green-700 rounded text-xs">
@@ -268,30 +287,21 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                 </div>
               </div>
 
-              {/* Publication */}
-              <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
-                <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Publication</h3>
-                <div>
-                  <h4 className="font-medium text-slate-900 text-xs md:text-sm leading-tight mb-1">
-                    <a href={config.publication.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      {config.publication.title}
-                    </a>
-                  </h4>
-                  <p className="text-slate-600 text-xs">{config.publication.venue}</p>
-                </div>
-              </div>
-
               {/* Education */}
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
                 <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Education</h3>
-                <div>
-                  <h4 className="font-medium text-slate-900 text-xs md:text-sm">{config.education.degree}</h4>
-                  <p className="text-slate-600 text-xs md:text-sm">
-                    <a href={config.education.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      {config.education.institution}
-                    </a>
-                  </p>
-                  <p className="text-slate-500 text-xs">CGPA: {config.education.cgpa} • {config.education.duration}</p>
+                <div className="space-y-3">
+                  {config.education.map((edu, index) => (
+                    <div key={index}>
+                      <h4 className="font-medium text-slate-900 text-xs md:text-sm">{edu.degree}</h4>
+                      <p className="text-slate-600 text-xs md:text-sm">
+                        <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                          {edu.institution}
+                        </a>
+                      </p>
+                      <p className="text-slate-500 text-xs">{edu.duration}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
