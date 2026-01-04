@@ -117,7 +117,7 @@
       "icon": "award"
     }
   ],
-  "featuredCredentials": [
+  "featuredCertifications": [
     {
       "name": "AWS Certified Cloud Practitioner",
       "url": "https://www.credly.com/badges/b63607fc-a7ce-46e6-97e5-725d796a9302/linked_in_profile",
@@ -129,7 +129,7 @@
       "color": "bg-blue-500"
     }
   ],
-  "credentials": [
+  "certifications": [
     "AWS Certified Cloud Practitioner",
     "Microsoft Certified: Azure Fundamentals",
     "AWS Databricks Platform Architect Accreditation",

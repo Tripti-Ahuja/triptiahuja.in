@@ -90,10 +90,10 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             </div>
           </div>
 
-          {/* Featured Credentials - Card Style with Images */}
+          {/* Featured Certifications - Card Style with Images */}
           <div className="mb-8 md:mb-12 px-4">
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={config.featuredCredentials[0]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+              <a href={config.featuredCertifications[0]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
                 <div className="flex items-center gap-3">
                   <img src="/logos/AWS.jpg" alt="AWS" className="w-12 h-12 rounded-lg object-cover" />
                   <div>
@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                   </div>
                 </div>
               </a>
-              <a href={config.featuredCredentials[1]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+              <a href={config.featuredCertifications[1]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
                 <div className="flex items-center gap-3">
                   <img src="/logos/microsoft.jpg" alt="Microsoft" className="w-12 h-12 rounded-lg object-cover" />
                   <div>
@@ -224,11 +224,11 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             {/* Sidebar */}
             <div className="lg:col-span-2 space-y-4 md:space-y-6 lg:mt-12 xl:mt-14">
               
-              {/* Credentials */}
+              {/* Certifications */}
               <div className="bg-white rounded-lg p-4 md:p-5 shadow-sm border border-slate-200">
-                <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Credentials</h3>
+                <h3 className="text-base md:text-lg font-semibold text-slate-900 mb-3">Certifications</h3>
                 <div className="space-y-2">
-                  {config.credentials.map((item, index) => (
+                  {config.certifications.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <div className={`w-2 h-2 ${['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500'][index % 4]} rounded-full flex-shrink-0`}></div>
                       <span className="text-slate-700 text-xs md:text-sm">{item}</span>

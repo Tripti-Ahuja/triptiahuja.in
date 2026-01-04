@@ -72,6 +72,12 @@ export interface Config {
   projectIconColors: {
     [key: string]: string;
   };
+  featuredCertifications: Array<{
+    name: string;
+    url: string;
+    color: string;
+  }>;
+  certifications: string[];
 }
 
 export async function loadConfig(): Promise<Config> {
