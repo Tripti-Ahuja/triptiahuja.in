@@ -33,7 +33,7 @@
       "position": "Senior Analytics and Cloud Engineer",
       "duration": "Jan '23 - Present",
       "description": "Python-based analytics and cloud data platforms across AWS and Azure, focused on building scalable, reliable data systems.",
-      "tech": ["Python", "AWS", "Azure", "Analytics"],
+      "tech": ["Python", "AWS S3", "AWS Lambda", "AWS ECS", "Azure Data Factory", "Analytics"],
       "tags": ["Bangalore", "Remote"]
     },
     {
@@ -44,8 +44,8 @@
       "position": "Senior Analytics Engineer",
       "duration": "Oct '22 - Dec '22",
       "description": "Built consumer credit risk models and analytics pipelines for auto lending decisions. Developed predictive scoring systems and real-time risk assessment dashboards.",
-      "tech": ["Python", "SQL", "AWS", "Analytics"],
-      "tags": ["California", "FinTech", "AutoTech", "Freelancing"]
+      "tech": ["Python", "SQL", "AWS S3", "AWS Lambda", "Analytics"],
+      "tags": ["California", "FinTech", "AutoTech", "Freelance"]
     },
     {
       "company": "Ultimate Kronos Group",
@@ -55,7 +55,7 @@
       "position": "Senior Analyst",
       "duration": "Dec '19 - Oct '22",
       "description": "Developed analytics dashboards and reporting solutions for workforce management insights. Built data pipelines and automated reporting workflows.",
-      "tech": ["SQL", "Tableau", "Azure", "Analytics", "ADF"],
+      "tech": ["SQL", "Tableau", "Azure Data Factory", "Azure Blob Storage", "Analytics"],
       "tags": ["Noida", "HR Tech"]
     },
     {
@@ -84,21 +84,21 @@
     {
       "name": "Corebridge Financial Analytics",
       "description": "Served as Analytics Engineer for Corebridge consulting. Managed user provisioning, server performance, and content governance. Built automated Python workflows for data refresh and compliance reporting on AWS.",
-      "tech": ["Analytics", "Python", "AWS"],
+      "tech": ["Analytics", "Python", "AWS S3", "AWS ECS", "AWS Lambda"],
       "client": "Corebridge",
       "icon": "building"
     },
     {
       "name": "Bain Data & Consulting Analytics",
       "description": "Built enterprise analytics solutions for Bain & Co. consulting engagements. Developed AWS-hosted data pipelines and Python automation for client deliverables, enabling data-driven strategic recommendations.",
-      "tech": ["Python", "AWS", "Tableau"],
+      "tech": ["Python", "AWS S3", "AWS Lambda", "AWS ECS", "Tableau"],
       "client": "Bain & Co.",
       "icon": "award"
     },
     {
       "name": "Cloud Analytics Migration",
       "description": "Migrated on-premise analytics to AWS cloud. Automated infrastructure provisioning and data workflows using Python scripts and AWS Lambda. Built and tested REST APIs with Postman for data integration, reducing manual overhead by 60%.",
-      "tech": ["AWS", "Python", "Lambda", "REST APIs", "Postman"],
+      "tech": ["AWS S3", "AWS Lambda", "AWS ECS", "Python", "REST APIs", "Postman"],
       "type": "Migration",
       "icon": "users"
     },
@@ -112,7 +112,7 @@
     {
       "name": "Neo Analytics Platform",
       "description": "Optimized lending analytics platform hosted on AWS. Built Python automation for data quality checks and implemented secure dealer-level data segregation across 15 dashboards.",
-      "tech": ["Python", "AWS", "Analytics"],
+      "tech": ["Python", "AWS S3", "AWS Lambda", "AWS ECS", "Analytics"],
       "client": "Neo Analytics",
       "icon": "award"
     }
@@ -148,18 +148,18 @@
   ],
   "skills": {
     "aiLanguages": ["Python", "SQL", "Data Modelling", "ETL", "Apache Spark"],
-    "saasFrameworks": ["PostgreSQL", "Salesforce", "ADF", "Datawarehouse", "Databricks", "S3"],
-    "cloud": ["AWS", "Azure", "Airflow", "Databricks", "PostgreSQL"]
+    "saasFrameworks": ["PostgreSQL", "Salesforce", "Azure Data Factory", "Datawarehouse", "Databricks", "AWS S3"],
+    "cloud": ["AWS S3", "AWS Lambda", "AWS ECS", "Azure Data Factory", "Azure Blob Storage", "Airflow", "Databricks", "PostgreSQL"]
   },
   "education": [
     {
-      "degree": "PGDBA",
+      "degree": "PGDBA (Post Graduate Diploma in Business Administration)",
       "institution": "Symbiosis Centre for Distance Learning",
       "institutionUrl": "https://scdl.net",
       "duration": "2017-2019"
     },
     {
-      "degree": "BBA",
+      "degree": "BBA (Bachelor of Business Administration)",
       "institution": "Mahatma Gandhi University",
       "institutionUrl": "https://mgu.ac.in",
       "duration": "2013-2016"
