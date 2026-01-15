@@ -93,19 +93,19 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
           {/* Featured Certifications - Card Style with Images */}
           <div className="mb-8 md:mb-12 px-4">
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={config.featuredCertifications[0]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+              <a href={config.featuredCertifications[0]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:scale-105 transition-all duration-200 w-64">
                 <div className="flex items-center gap-3">
-                  <img src="/logos/AWS.jpg" alt="AWS" className="w-12 h-12 rounded-lg object-cover" />
-                  <div>
+                  <img src="/logos/AWS.jpg" alt="AWS" className="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
+                  <div className="min-w-0">
                     <p className="font-bold text-slate-900 text-sm">AWS Certified</p>
                     <p className="text-xs text-slate-600">Cloud Practitioner</p>
                   </div>
                 </div>
               </a>
-              <a href={config.featuredCertifications[1]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-200">
+              <a href={config.featuredCertifications[1]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500 hover:shadow-xl hover:scale-105 transition-all duration-200 w-64">
                 <div className="flex items-center gap-3">
-                  <img src="/logos/microsoft.jpg" alt="Microsoft" className="w-12 h-12 rounded-lg object-cover" />
-                  <div>
+                  <img src="/logos/microsoft.jpg" alt="Microsoft" className="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
+                  <div className="min-w-0">
                     <p className="font-bold text-slate-900 text-sm">Microsoft Azure</p>
                     <p className="text-xs text-slate-600">Fundamentals (AZ-900)</p>
                   </div>
