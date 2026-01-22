@@ -12,7 +12,7 @@ function App() {
       .then(config => {
         setConfig(config);
         // Set the document title from config
-        document.title = config.personal.name;
+        document.title = `${config.personal.name} - Senior Data & Cloud Engineer Portfolio`;
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
