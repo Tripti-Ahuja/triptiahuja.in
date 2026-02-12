@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin, MapPin, MessageCircle, Award, Users, Building } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, MessageCircle, Award, Users, Building, FileText } from 'lucide-react';
 import CalendlyEmbed from './CalendlyEmbed';
 import { Config } from '../utils/configLoader';
 
@@ -70,6 +70,11 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                  className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
                 <Linkedin size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">LinkedIn</span>
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-all border border-slate-200">
+                <FileText size={14} className="text-slate-600 md:w-4 md:h-4" />
+                <span className="text-xs md:text-sm text-slate-700">Resume</span>
               </a>
               <div className="flex items-center justify-center gap-2 w-28 md:w-32 px-2 md:px-3 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
                 <MapPin size={14} className="text-slate-600 md:w-4 md:h-4" />
