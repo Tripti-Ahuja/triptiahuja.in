@@ -68,16 +68,6 @@
       "description": "Delivered data-driven insights for enterprise clients across industries. Built dashboards and automated reporting solutions to support strategic decision-making.",
       "tech": ["SQL", "Tableau", "Power BI"],
       "tags": ["Noida", "Consulting", "BigTech"]
-    },
-    {
-      "company": "Reliable Allied Services",
-      "companyLogo": "/logos/ras.png",
-      "logoColor": "bg-white",
-      "position": "Human Resources Assistant",
-      "duration": "Mar '16 - Apr '16",
-      "description": "Supported HR operations including recruitment coordination, employee onboarding, and administrative tasks.",
-      "tech": ["MS Office", "HR Systems"],
-      "tags": ["Noida", "Internship"]
     }
   ],
   "projects": [
