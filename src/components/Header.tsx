@@ -116,6 +116,15 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                   </div>
                 </div>
               </a>
+              <a href={config.featuredCertifications[2]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-teal-700 hover:shadow-xl hover:scale-105 transition-all duration-200 w-64">
+                <div className="flex items-center gap-3">
+                  <img src="/logos/pspo.svg" alt="PSPO I" className="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-bold text-slate-900 text-sm">Scrum PSPO I</p>
+                    <p className="text-xs text-slate-600">Product Owner</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

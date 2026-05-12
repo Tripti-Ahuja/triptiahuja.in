@@ -127,11 +127,17 @@
       "name": "Microsoft Azure Fundamentals (AZ-900)",
       "url": "https://learn.microsoft.com/en-us/users/triptiahuja-6690/credentials/7de1a1f0ec8fdd11",
       "color": "bg-blue-500"
+    },
+    {
+      "name": "Professional Scrum Product Owner I (PSPO I)",
+      "url": "https://www.credly.com/badges/6c3bd633-814e-4514-bede-889c306929f4",
+      "color": "bg-teal-700"
     }
   ],
   "certifications": [
     "AWS Certified Cloud Practitioner",
     "Microsoft Certified: Azure Fundamentals",
+    "Professional Scrum Product Owner I (PSPO I)",
     "AWS Databricks Platform Architect Accreditation",
     "Developing Applications with Apache Spark",
     "Introduction to Apache Spark",
