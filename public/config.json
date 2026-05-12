@@ -10,7 +10,7 @@
     },
     "location": "Remote",
     "stats": {
-      "yearsExperience": "8+",
+      "yearsExperience": "9+",
       "companies": 5
     }
   },
@@ -30,9 +30,9 @@
       "companyUrl": "https://mphasis.com",
       "companyLogo": "/logos/mphasis.png",
       "logoColor": "bg-white",
-      "position": "Senior Analytics and Cloud Engineer",
+      "position": "Product Module Lead - Systems",
       "duration": "Jan '23 - Present",
-      "description": "Python-based analytics and cloud data platforms across AWS and Azure, focused on building scalable, reliable data systems.",
+      "description": "Driving product strategy and execution for Python-based analytics and cloud data platforms across AWS and Azure. Owning product backlogs, defining roadmaps, and collaborating with cross-functional teams to build scalable, reliable data systems.",
       "tech": ["Python", "AWS S3", "AWS Lambda", "AWS ECS", "Azure Data Factory", "Analytics"],
       "tags": ["Bangalore", "Remote"]
     },
@@ -135,9 +135,9 @@
     }
   ],
   "certifications": [
+    "Professional Scrum Product Owner I (PSPO I)",
     "AWS Certified Cloud Practitioner",
     "Microsoft Certified: Azure Fundamentals",
-    "Professional Scrum Product Owner I (PSPO I)",
     "AWS Databricks Platform Architect Accreditation",
     "Developing Applications with Apache Spark",
     "Introduction to Apache Spark",

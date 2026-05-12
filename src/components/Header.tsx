@@ -42,9 +42,9 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
-              Experienced in <span className="font-semibold text-slate-700">Data Analytics, Python, and Cloud Engineering (AWS & Azure)</span>. 
-              Specialized in <span className="font-semibold text-slate-700">building scalable data pipelines, analytics platforms, and cloud-native solutions</span>. 
-              Certified AWS Cloud Practitioner and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across analytics, data engineering, and cloud infrastructure.
+              Experienced in <span className="font-semibold text-slate-700">Product Management, Generative AI, and Cloud Engineering (AWS & Azure)</span>. 
+              Specialized in <span className="font-semibold text-slate-700">driving product strategy, building AI-powered solutions with LLMs, RAG pipelines, and vector databases</span>. 
+              Certified PSPO I, AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across product ownership, prompt engineering, and cloud infrastructure.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
               </a>
               <a href={config.featuredCertifications[2]?.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-4 shadow-lg border-2 border-teal-700 hover:shadow-xl hover:scale-105 transition-all duration-200 w-64">
                 <div className="flex items-center gap-3">
-                  <img src="/logos/pspo.svg" alt="PSPO I" className="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
+                  <img src="/logos/pspo.svg" alt="PSPO I" className="w-12 h-12 rounded-lg object-contain flex-shrink-0" />
                   <div className="min-w-0">
                     <p className="font-bold text-slate-900 text-sm">Scrum PSPO I</p>
                     <p className="text-xs text-slate-600">Product Owner</p>
