@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">
               {config.personal.name}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
+            <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title} <span className="text-slate-500">({config.personal.stats.yearsExperience} YOE)</span></p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
               Experienced in <span className="font-semibold text-slate-700">Product Management, Generative AI, and Cloud Engineering (AWS & Azure)</span>. 
               Specialized in <span className="font-semibold text-slate-700">driving product strategy, building AI-powered solutions with LLMs, RAG pipelines, and vector databases</span>. 
@@ -76,18 +76,6 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                 <FileText size={14} className="text-slate-600 md:w-4 md:h-4" />
                 <span className="text-xs md:text-sm text-slate-700">Resume</span>
               </a>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="flex justify-center gap-4 sm:gap-6 md:gap-8 mb-6 md:mb-8 px-4">
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.yearsExperience}</div>
-              <div className="text-xs sm:text-sm text-slate-600">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-slate-900">{config.personal.stats.companies}</div>
-              <div className="text-xs sm:text-sm text-slate-600">Companies</div>
             </div>
           </div>
 
