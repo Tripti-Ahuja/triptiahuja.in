@@ -18,9 +18,11 @@ from reportlab.platypus import (
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATHS = [ROOT / "public" / "resume.pdf", ROOT / "resume.pdf"]
 
+ROLE_TITLE = "Product Module Lead - Systems"
+
 SUMMARY = (
-    "Senior Data & Cloud Engineer with 9+ years of experience building scalable analytics platforms, "
-    "data pipelines, and business intelligence solutions using Python, TypeScript, SQL, and LLMs. "
+    f"{ROLE_TITLE} with 9+ years of experience building scalable analytics platforms, "
+    "data pipelines, and business intelligence solutions using Python, SQL, and LLMs. "
     "Certified Professional Scrum Product Owner (PSPO I), AWS Cloud Practitioner, and Microsoft Azure "
     "Fundamentals (AZ-900), with hands-on product ownership and cloud delivery experience. Proven track "
     "record delivering enterprise data architectures on AWS and Azure, implementing advanced analytics "
@@ -32,15 +34,15 @@ EXPERIENCES = [
     {
         "company": "Mphasis Limited",
         "location": "India",
-        "title": "Product Module Lead - Systems",
+        "title": ROLE_TITLE,
         "duration": "Jan 2023 – Present",
-        "tech": "Python, Azure Data Factory, AWS (ECS, Lambda, S3, EC2 etc.), SQL, Tableau",
+        "tech": "Python, Azure Data Factory, AWS, SQL, Tableau",
         "bullets": [
             "Led multiple server migration projects from on-premises to AWS cloud, including application re-architecture, data migration, and infrastructure optimization reducing operational costs by 30%.",
             "Implement monitoring and alerting systems for cloud resources, enhancing visibility and enabling rapid issue resolution while maintaining 99.9% uptime.",
-            "Build automation solutions using Python/Typescript for full-stack application development and Tableau workflow optimization, leveraging REST APIs to streamline content publishing, administrative processes, and operational tasks across cloud platforms.",
-            "Deploy cloud infrastructure on AWS using EC2, S3, Lambda, and ECS, managing server configurations, security groups, and auto-scaling policies for high-availability systems.",
-            "Develop ETL pipelines using Azure Data Factory and AWS Lambda for automated data ingestion, transformation, and loading across multi-cloud environments.",
+            "Build automation solutions using Python for full-stack application development and Tableau workflow optimization, leveraging REST APIs to streamline content publishing, administrative processes, and operational tasks across cloud platforms.",
+            "Deploy cloud infrastructure on AWS, managing server configurations, security groups, and auto-scaling policies for high-availability systems.",
+            "Develop ETL pipelines using Azure Data Factory and AWS for automated data ingestion, transformation, and loading across multi-cloud environments.",
             "Build end-to-end analytics solutions using Databricks for large-scale data processing and create interactive dashboards in Tableau and Power BI, translating complex datasets into actionable business insights for stakeholders.",
         ],
     },
