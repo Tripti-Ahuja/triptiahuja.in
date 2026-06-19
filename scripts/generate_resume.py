@@ -21,13 +21,10 @@ OUTPUT_PATHS = [ROOT / "public" / "resume.pdf", ROOT / "resume.pdf"]
 ROLE_TITLE = "Product Module Lead - Systems"
 
 SUMMARY = (
-    f"{ROLE_TITLE} with 9+ years of experience building scalable analytics platforms, "
-    "data pipelines, and business intelligence solutions using Python, SQL, and LLMs. "
-    "Certified Professional Scrum Product Owner (PSPO I), AWS Cloud Practitioner, and Microsoft Azure "
-    "Fundamentals (AZ-900), with hands-on product ownership and cloud delivery experience. Proven track "
-    "record delivering enterprise data architectures on AWS and Azure, implementing advanced analytics "
-    "and interactive visualizations with Databricks, Tableau, and Power BI to evaluate critical business "
-    "metrics across diverse industries."
+    "Product leader with deep working knowledge of the generative AI stack — LLMs, RAG and advanced RAG pipelines, vector databases, and prompt engineering — focused on translating AI capability into product roadmaps and shipped outcomes. "
+    "9+ years owning product strategy, backlogs, and roadmaps for analytics and cloud data platforms across AWS and Azure. "
+    "Certified Professional Scrum Product Owner (PSPO I), AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900). "
+    "Proven record delivering enterprise data architectures and BI solutions (Databricks, Tableau, Power BI) that turn complex data into business decisions across diverse industries."
 )
 
 EXPERIENCES = [
@@ -38,12 +35,12 @@ EXPERIENCES = [
         "duration": "Jan 2023 – Present",
         "tech": "Python, Azure Data Factory, AWS, SQL, Tableau",
         "bullets": [
-            "Led multiple server migration projects from on-premises to AWS cloud, including application re-architecture, data migration, and infrastructure optimization reducing operational costs by 30%.",
-            "Implement monitoring and alerting systems for cloud resources, enhancing visibility and enabling rapid issue resolution while maintaining 99.9% uptime.",
-            "Build automation solutions using Python for full-stack application development and Tableau workflow optimization, leveraging REST APIs to streamline content publishing, administrative processes, and operational tasks across cloud platforms.",
-            "Deploy cloud infrastructure on AWS, managing server configurations, security groups, and auto-scaling policies for high-availability systems.",
-            "Develop ETL pipelines using Azure Data Factory and AWS for automated data ingestion, transformation, and loading across multi-cloud environments.",
-            "Build end-to-end analytics solutions using Databricks for large-scale data processing and create interactive dashboards in Tableau and Power BI, translating complex datasets into actionable business insights for stakeholders.",
+            "Own product strategy, backlog, and roadmap for Python-based analytics and cloud data platforms across AWS and Azure, partnering with cross-functional teams to ship scalable, reliable systems.",
+            "Led multiple on-premises-to-AWS migration projects, including application re-architecture and data migration, reducing operational costs by 30%.",
+            "Built automation solutions in Python and optimized Tableau workflows via REST APIs, streamlining content publishing and operational processes across cloud platforms.",
+            "Developed ETL pipelines with Azure Data Factory and AWS for automated ingestion, transformation, and loading across multi-cloud environments.",
+            "Built end-to-end analytics on Databricks with interactive Tableau and Power BI dashboards, translating complex datasets into actionable business insights for stakeholders.",
+            "Implemented monitoring and alerting for cloud resources, enabling rapid issue resolution and 99.9% uptime.",
         ],
     },
     {
