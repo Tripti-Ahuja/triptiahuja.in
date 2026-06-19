@@ -51,8 +51,6 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     return parts.map((p, i) => (typeof p === 'string' ? <React.Fragment key={i}>{p}</React.Fragment> : p));
   };
 
-  
-
   const getTagStyle = (tag: string): string => {
     if (config.tagColors[tag]) return config.tagColors[tag];
     if (config.tagColors.locationTags?.includes(tag)) return "bg-yellow-100 text-yellow-700";
