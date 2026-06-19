@@ -33,7 +33,7 @@ EXPERIENCES = [
         "location": "India",
         "title": ROLE_TITLE,
         "duration": "Jan 2023 – Present",
-        "tech": "Python, Azure Data Factory, AWS, SQL, Tableau",
+        "tech": "Python, LLMs, APIs, AWS, Analytics, Agentic AI",
         "bullets": [
             "Own product strategy, backlog, and roadmap for Python-based analytics and cloud data platforms across AWS and Azure, partnering with cross-functional teams to ship scalable, reliable systems.",
             "Led multiple on-premises-to-AWS migration projects, including application re-architecture and data migration, reducing operational costs by 30%.",
