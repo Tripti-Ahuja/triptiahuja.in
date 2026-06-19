@@ -3,7 +3,7 @@
     "name": "Tripti Ahuja",
     "title": "AI Product Lead (9+ YOE)",
     "description": {
-      "summary": "Deep working knowledge of the generative AI stack — LLMs, tokenization, RAG and advanced RAG pipelines, vector databases, and prompt engineering. Experience in product ownership, analytics, and cloud data platforms (AWS & Azure). Certified Scrum Product Owner (PSPO I). I translate AI capability into product roadmaps and ship outcomes, bridging business strategy and technical execution.",
+      "summary": "Product leader with deep working knowledge of the generative AI stack — LLMs, RAG and advanced RAG pipelines, vector databases, and prompt engineering — focused on translating AI capability into product roadmaps and shipped outcomes. 9+ years owning product strategy, backlogs, and roadmaps for analytics and cloud data platforms across AWS and Azure. Certified Professional Scrum Product Owner (PSPO I), AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900). Proven record delivering enterprise data architectures and BI solutions (Databricks, Tableau, Power BI) that turn complex data into business decisions across diverse industries.",
       "highlights": ["AI, AWS, Python, LLMs, and SaaS"],
       "specialization": "0→1 product development",
       "experience": "YC and Sequoia-backed startups",
@@ -33,7 +33,14 @@
       "logoColor": "bg-white",
       "position": "Product Module Lead - Systems",
       "duration": "Jan '23 - Present",
-      "description": "Driving product strategy and execution for Python-based analytics, bringing generative AI capability into product thinking. Owning product backlogs, defining roadmaps, and partnering with cross-functional teams to ship scalable, reliable data systems across cloud data platforms (AWS & Azure).",
+      "description": [
+        "Own product strategy, backlog, and roadmap for Python-based analytics and cloud data platforms across AWS and Azure, partnering with cross-functional teams to ship scalable, reliable systems.",
+        "Led multiple on-premises-to-AWS migration projects, including application re-architecture and data migration, reducing operational costs by 30%.",
+        "Built automation solutions in Python and optimized Tableau workflows via REST APIs, streamlining content publishing and operational processes across cloud platforms.",
+        "Developed ETL pipelines with Azure Data Factory and AWS for automated ingestion, transformation, and loading across multi-cloud environments.",
+        "Built end-to-end analytics on Databricks with interactive Tableau and Power BI dashboards, translating complex datasets into actionable business insights for stakeholders.",
+        "Implemented monitoring and alerting for cloud resources, enabling rapid issue resolution and 99.9% uptime."
+      ],
       "tech": ["Python", "LLMs", "APIs", "AWS", "Analytics", "Agentic AI"],
       "tags": ["Bangalore", "Remote"]
     },
