@@ -8,6 +8,49 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ config }) => {
+  const renderSummary = (s: string) => {
+    const phrases = [
+      'product ownership, analytics, and cloud data platforms (AWS & Azure).',
+      'Certified Scrum Product Owner (PSPO I).',
+      'generative AI stack — LLMs, tokenization, RAG and advanced RAG pipelines, vector databases, and prompt engineering'
+    ];
+
+    const parts: (string | JSX.Element)[] = [];
+    let cursor = 0;
+
+    while (cursor < s.length) {
+      let nextIndex = -1;
+      let nextPhrase = '';
+
+      for (const phrase of phrases) {
+        const idx = s.indexOf(phrase, cursor);
+        if (idx !== -1 && (nextIndex === -1 || idx < nextIndex)) {
+          nextIndex = idx;
+          nextPhrase = phrase;
+        }
+      }
+
+      if (nextIndex === -1) {
+        parts.push(s.substring(cursor));
+        break;
+      }
+
+      if (nextIndex > cursor) {
+        parts.push(s.substring(cursor, nextIndex));
+      }
+
+      parts.push(
+        <span key={cursor} className="font-semibold text-slate-700">
+          {nextPhrase}
+        </span>
+      );
+
+      cursor = nextIndex + nextPhrase.length;
+    }
+
+    return parts.map((p, i) => (typeof p === 'string' ? <React.Fragment key={i}>{p}</React.Fragment> : p));
+  };
+
   const getTagStyle = (tag: string): string => {
     if (config.tagColors[tag]) return config.tagColors[tag];
     if (config.tagColors.locationTags?.includes(tag)) return "bg-yellow-100 text-yellow-700";
@@ -40,11 +83,11 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">
               {config.personal.name}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title} <span className="text-slate-500">({config.personal.stats.yearsExperience} YOE)</span></p>
+            <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
             <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
-              Experienced in <span className="font-semibold text-slate-700">Product Management, Generative AI, and Cloud Engineering (AWS & Azure)</span>. 
-              Specialized in <span className="font-semibold text-slate-700">driving product strategy, building AI-powered solutions with LLMs, RAG pipelines, and vector databases</span>. 
-              Certified PSPO I, AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across product ownership, prompt engineering, and cloud infrastructure.
+              {config.personal.description.summary ? renderSummary(config.personal.description.summary) : (
+                `Experienced in Product Management, Generative AI, and Cloud Engineering (AWS & Azure). Specialized in driving product strategy, building AI-powered solutions with LLMs, RAG pipelines, and vector databases. Certified PSPO I, AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across product ownership, prompt engineering, and cloud infrastructure.`
+              )}
             </p>
           </div>
 
