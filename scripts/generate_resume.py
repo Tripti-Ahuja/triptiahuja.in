@@ -64,7 +64,7 @@ EXPERIENCES = [
         "tech": "Excel, VBA, SQL, Power BI, SharePoint",
         "bullets": [
             "Gathered and documented detailed business requirements for analytics solutions, creating functional specifications and process flow diagrams for development teams.",
-            "Built automated MIS reporting systems using Advanced Excel, VBA macros, and SQL queries, reducing manual reporting effort by 60%.",
+            "Built automated MIS reporting systems (Excel, VBA, SQL), reducing manual reporting effort by 60%.",
             "Facilitated stakeholder workshops and requirement elicitation sessions, ensuring alignment between business needs and technical solutions.",
             "Prepared executive dashboards and presentations for C-level stakeholders, translating complex data insights into actionable business recommendations.",
         ],
