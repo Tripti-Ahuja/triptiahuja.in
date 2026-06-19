@@ -212,15 +212,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                         </div>
                         <span className="text-xs md:text-sm text-slate-500 font-medium whitespace-nowrap">{exp.duration}</span>
                       </div>
-                      {Array.isArray(exp.description) ? (
-                        <ul className="list-disc pl-5 text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">
-                          {exp.description.map((line: string, liIndex: number) => (
-                            <li key={liIndex} className="mb-1">{line}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">{exp.description}</p>
-                      )}
+                      <p className="text-xs md:text-sm text-slate-600 mb-3 leading-relaxed">{exp.description}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {exp.tech.map((tech, techIndex) => (
                           <span key={techIndex} className="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">
