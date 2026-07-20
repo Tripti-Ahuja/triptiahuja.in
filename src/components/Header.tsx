@@ -11,19 +11,24 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   const renderSummary = (s: string) => {
     const phrases = [
       'product ownership, analytics, and cloud data platforms (AWS & Azure).',
-      'Certified Scrum Product Owner (PSPO I).',
+      'Certified Scrum Product Owner (PSPO-I).',
       'generative AI stack — LLMs, tokenization, RAG and advanced RAG pipelines, vector databases, and prompt engineering'
     ];
+
+    // Keep "PSPO-I" from wrapping onto its own line
+    const normalized = s
+      .replace(/\(PSPO[\u2011\u2010\- ]?I\)/g, '(PSPO-I)')
+      .replace(/Certified Scrum Product Owner \(PSPO-I\)\./g, 'Certified Scrum Product Owner (PSPO-I).');
 
     const parts: (string | JSX.Element)[] = [];
     let cursor = 0;
 
-    while (cursor < s.length) {
+    while (cursor < normalized.length) {
       let nextIndex = -1;
       let nextPhrase = '';
 
       for (const phrase of phrases) {
-        const idx = s.indexOf(phrase, cursor);
+        const idx = normalized.indexOf(phrase, cursor);
         if (idx !== -1 && (nextIndex === -1 || idx < nextIndex)) {
           nextIndex = idx;
           nextPhrase = phrase;
@@ -31,19 +36,28 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
       }
 
       if (nextIndex === -1) {
-        parts.push(s.substring(cursor));
+        parts.push(normalized.substring(cursor));
         break;
       }
 
       if (nextIndex > cursor) {
-        parts.push(s.substring(cursor, nextIndex));
+        parts.push(normalized.substring(cursor, nextIndex));
       }
 
-      parts.push(
-        <span key={cursor} className="font-semibold text-slate-700">
-          {nextPhrase}
-        </span>
-      );
+      if (nextPhrase === 'Certified Scrum Product Owner (PSPO-I).') {
+        parts.push(
+          <span key={cursor} className="font-semibold text-slate-700">
+            Certified Scrum Product Owner{' '}
+            <span className="whitespace-nowrap">(PSPO-I).</span>
+          </span>
+        );
+      } else {
+        parts.push(
+          <span key={cursor} className="font-semibold text-slate-700">
+            {nextPhrase}
+          </span>
+        );
+      }
 
       cursor = nextIndex + nextPhrase.length;
     }
