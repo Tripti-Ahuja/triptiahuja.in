@@ -45,10 +45,10 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
       }
 
       if (nextPhrase === 'Certified Scrum Product Owner (PSPO-I).') {
+        // Keep the full cert phrase on one line (never orphan "(PSPO-I).")
         parts.push(
-          <span key={cursor} className="font-semibold text-slate-700">
-            Certified Scrum Product Owner{' '}
-            <span className="whitespace-nowrap">(PSPO-I).</span>
+          <span key={cursor} className="font-semibold text-slate-700 whitespace-nowrap">
+            Certified Scrum Product Owner (PSPO-I).
           </span>
         );
       } else {
