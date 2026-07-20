@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
               {config.personal.name}
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-4">{config.personal.title}</p>
-            <p className="text-sm sm:text-base text-slate-500 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-sm sm:text-base text-slate-500 max-w-5xl mx-auto leading-relaxed px-4">
               {config.personal.description.summary ? renderSummary(config.personal.description.summary) : (
                 `Experienced in Product Management, Generative AI, and Cloud Engineering (AWS & Azure). Specialized in driving product strategy, building AI-powered solutions with LLMs, RAG pipelines, and vector databases. Certified PSPO I, AWS Cloud Practitioner, and Microsoft Azure Fundamentals (AZ-900), with hands-on experience across product ownership, prompt engineering, and cloud infrastructure.`
               )}
